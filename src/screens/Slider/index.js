@@ -6,9 +6,10 @@ import {
     Image
 } from 'react-native';
 import Swiper from 'react-native-swiper';
+import styles from './styles';
 
-export class Slider extends Component{
-    constructor (){
+export default class Slider extends Component{
+    constructor (props){
         super(props);
         this.state = {
 
@@ -17,8 +18,19 @@ export class Slider extends Component{
 
     render(){
         return(
-            <Swiper>
-                
+            <Swiper style={styles.wrapper} activeDotColor='yellow'>
+                <View style= {styles.firstView}>
+                    <Image source = {require('../../../assets/images/image1.png')} />
+                    <Text> First  slide</Text>
+                </View>
+                <View>
+                <Image source = {require('../../../assets/images/Housing.png')} />
+                    <Text> Second  slide</Text>
+                </View>
+                <View>
+                <Image source = {require('../../../assets/images/education.png')} />
+                    <Text> Third  slide</Text>
+                </View>
             </Swiper>
         )
     }
