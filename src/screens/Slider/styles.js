@@ -25,9 +25,9 @@ export default{
         color: color.whiteOff,
     },
     secondText: {
-        fontFamily: 'uber-b',
-        fontWeight: 'bold',
-        color: color.white,
+        fontFamily: 'uber',
+        fontWeight: '500',
+        color: color.whiteOff,
         fontSize: width/15,
     },
     touchable: {
