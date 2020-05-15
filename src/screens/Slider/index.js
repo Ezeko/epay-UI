@@ -3,10 +3,12 @@ import {
     Text,
     View,
     Dimension,
-    Image
+    Image,
+    ImageBackground
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 import styles from './styles';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default class Slider extends Component{
     constructor (props){
@@ -18,18 +20,34 @@ export default class Slider extends Component{
 
     render(){
         return(
-            <Swiper style={styles.wrapper} activeDotColor='yellow'>
+            <Swiper activeDotColor='yellow'>
                 <View style= {styles.firstView}>
-                    <Image source = {require('../../../assets/images/image1.png')} />
-                    <Text> First  slide</Text>
+                    <ImageBackground source ={require('../../../assets/images/image1.png')} style ={styles.firstView.image} >
+                        <View style={styles.text}>
+                            <Text style={styles.firstText}> Travel</Text>
+                            <Text style={styles.secondText}> Travel the World with style and Comfort with EPay Travel</Text>
+                        </View>
+                        
+                    </ImageBackground>
                 </View>
                 <View>
-                <Image source = {require('../../../assets/images/Housing.png')} />
-                    <Text> Second  slide</Text>
+                <ImageBackground source = {require('../../../assets/images/Housing.png')} >
+                    <View style={styles.text}>
+                        <Text style={styles.firstText}> Housing</Text>
+                        <Text style={styles.secondText}> Affordable luxurious house</Text>
+                    </View>
+                </ImageBackground>
                 </View>
-                <View>
-                <Image source = {require('../../../assets/images/education.png')} />
-                    <Text> Third  slide</Text>
+                <View style={styles.thirdView}>
+                    <ImageBackground source = {require('../../../assets/images/education.png')} style={styles.thirdView.image} >
+                        <View style={styles.text}>
+                            <Text style={styles.firstText}> Education</Text>
+                            <Text style={styles.secondText}> Get Student Loan Anywhere in Nigeria</Text>
+                        </View>
+                        <TouchableOpacity>
+                            <Text style={{color: 'white'}}>Get Started</Text>
+                        </TouchableOpacity>
+                    </ImageBackground>
                 </View>
             </Swiper>
         )
