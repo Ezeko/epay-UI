@@ -13,17 +13,9 @@ export default{
             width
         }
     },
-    thirdView: {
-        height,
-        width,
-        image: {
-            height: '100%',
-            width
-        }
-    },
     text: {
         flex: 1,
-        marginTop: 120,
+        marginTop: height/5,
         alignItems: 'flex-start',
         justifyContent: 'center',
     },
@@ -37,5 +29,14 @@ export default{
         fontWeight: 'bold',
         color: color.white,
         fontSize: width/15,
+    },
+    touchable: {
+        color: 'white',
+        alignItems: 'flex-end',
+        fontFamily: 'uber-b',
+        marginLeft: width/1.5,
+        marginBottom: 20,
+        fontSize: width/17,
+
     }
 }

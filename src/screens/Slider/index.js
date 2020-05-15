@@ -31,21 +31,21 @@ export default class Slider extends Component{
                     </ImageBackground>
                 </View>
                 <View>
-                    <ImageBackground source = {require('../../../assets/images/Housing.png')} >
+                    <ImageBackground source = {require('../../../assets/images/Housing.png')} style = {styles.firstView.image} >
                         <View style={styles.text}>
                             <Text style={styles.firstText}> Housing</Text>
                             <Text style={styles.secondText}> Affordable luxurious house</Text>
                         </View>
                     </ImageBackground>
                 </View>
-                <View style={styles.thirdView}>
-                    <ImageBackground source = {require('../../../assets/images/education.png')} style={styles.thirdView.image} >
+                <View style={styles.firstView}>
+                    <ImageBackground source = {require('../../../assets/images/education.png')} style={styles.firstView.image} >
                         <View style={styles.text}>
                             <Text style={styles.firstText}> Education</Text>
                             <Text style={styles.secondText}> Get Student Loan Anywhere in Nigeria</Text>
                         </View>
                         <TouchableOpacity>
-                            <Text style={{color: 'white'}}>Get Started</Text>
+                            <Text style={styles.touchable}>Get Started</Text>
                         </TouchableOpacity>
                     </ImageBackground>
                 </View>
