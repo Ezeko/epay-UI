@@ -31,12 +31,12 @@ export default class Slider extends Component{
                     </ImageBackground>
                 </View>
                 <View>
-                <ImageBackground source = {require('../../../assets/images/Housing.png')} >
-                    <View style={styles.text}>
-                        <Text style={styles.firstText}> Housing</Text>
-                        <Text style={styles.secondText}> Affordable luxurious house</Text>
-                    </View>
-                </ImageBackground>
+                    <ImageBackground source = {require('../../../assets/images/Housing.png')} >
+                        <View style={styles.text}>
+                            <Text style={styles.firstText}> Housing</Text>
+                            <Text style={styles.secondText}> Affordable luxurious house</Text>
+                        </View>
+                    </ImageBackground>
                 </View>
                 <View style={styles.thirdView}>
                     <ImageBackground source = {require('../../../assets/images/education.png')} style={styles.thirdView.image} >
