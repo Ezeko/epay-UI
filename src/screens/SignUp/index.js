@@ -29,6 +29,7 @@ export default class SignUp extends Component {
             placeholder = 'First Name'
             autoCompleteType = 'name'
             blurOnSubmit = {true}
+            textAlign = 'center'
           />
         </View>
         <View style = {style.input}>
@@ -39,6 +40,7 @@ export default class SignUp extends Component {
             placeholder = 'Last Name'
             autoCompleteType = 'name'
             blurOnSubmit = {true}
+            textAlign = 'center'
           />
         </View>
         <View style = {style.input}>
@@ -46,9 +48,10 @@ export default class SignUp extends Component {
             keyboardType = 'email-address'
             returnKeyType = 'next'
             textContentType = 'emailAddress'
-            placeholder = 'Your Email...'
+            placeholder = 'email@example.com'
             autoCompleteType = 'email'
             blurOnSubmit = {true}
+            textAlign = 'center'
           />
         </View>
         <View style = {style.input}>
@@ -56,9 +59,10 @@ export default class SignUp extends Component {
             keyboardType = 'number-pad'
             returnKeyType = 'next'
             textContentType = 'telephoneNumber'
-            placeholder = 'Your Phone Number'
+            placeholder = '08012345678'
             autoCompleteType = 'tel'
             blurOnSubmit = {true}
+            textAlign = 'center'
           />
         </View>
         <View style = {style.input}>
@@ -69,6 +73,7 @@ export default class SignUp extends Component {
             placeholder = 'Your Address'
             autoCompleteType = 'street-address'
             blurOnSubmit = {true}
+            textAlign = 'center'
           />
         </View>
         <View style = {style.input} >
@@ -80,6 +85,7 @@ export default class SignUp extends Component {
             placeholder = 'Your Password'
             blurOnSubmit = {true}
             secureTextEntry = {true}
+            textAlign = 'center'
           />
         </View>
         <TouchableOpacity onPress = {() => this.props.navigation.navigate('OTP')}>
