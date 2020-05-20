@@ -25,6 +25,7 @@ export default class OTP extends Component {
             returnKeyType = 'send'
             keyboardType = 'number-pad'
             textContentType = 'oneTimeCode'
+            placeholder = '8 - Digits OTP'
             maxLength = {8}
           />
         </KeyboardAwareScrollView>

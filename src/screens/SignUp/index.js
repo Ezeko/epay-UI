@@ -5,6 +5,7 @@ import {
   Text
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import style from './styles';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 
@@ -18,50 +19,78 @@ export default class SignUp extends Component {
 
   render() {
     return(
-      <KeyboardAwareScrollView>
-        <View>
+      <View style = {style.container} >
+      <KeyboardAwareScrollView style = {style.wrapper}>
+        <View style = {style.input}>
           <TextInput
             keyboardType = 'default'
             returnKeyType = 'next'
             textContentType = 'name'
+            placeholder = 'First Name'
+            autoCompleteType = 'name'
+            blurOnSubmit = {true}
           />
         </View>
-        <View>
+        <View style = {style.input}>
+          <TextInput
+            keyboardType = 'default'
+            returnKeyType = 'next'
+            textContentType = 'name'
+            placeholder = 'Last Name'
+            autoCompleteType = 'name'
+            blurOnSubmit = {true}
+          />
+        </View>
+        <View style = {style.input}>
           <TextInput
             keyboardType = 'email-address'
             returnKeyType = 'next'
             textContentType = 'emailAddress'
+            placeholder = 'Your Email...'
+            autoCompleteType = 'email'
+            blurOnSubmit = {true}
           />
         </View>
-        <View>
+        <View style = {style.input}>
           <TextInput
             keyboardType = 'number-pad'
             returnKeyType = 'next'
             textContentType = 'telephoneNumber'
+            placeholder = 'Your Phone Number'
+            autoCompleteType = 'tel'
+            blurOnSubmit = {true}
           />
         </View>
-        <View>
+        <View style = {style.input}>
           <TextInput
             keyboardType = 'default'
             returnKeyType = 'next'
             textContentType = 'fullStreetAddress'
+            placeholder = 'Your Address'
+            autoCompleteType = 'street-address'
+            blurOnSubmit = {true}
           />
         </View>
-        <View>
+        <View style = {style.input} >
           <TextInput
             keyboardType = 'default'
             returnKeyType = 'done'
             textContentType = 'password'
+            autoCompleteType = 'password'
+            placeholder = 'Your Password'
+            blurOnSubmit = {true}
+            secureTextEntry = {true}
           />
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress = {() => this.props.navigation.navigate('OTP')}>
           <Text>Register</Text>
         </TouchableOpacity>
         <Text>Or</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress = { () => this.props.navigation.navigate('SignIn')}>
           <Text>Sign in</Text>
         </TouchableOpacity>
       </KeyboardAwareScrollView>
+    </View>
     )
   }
 }
