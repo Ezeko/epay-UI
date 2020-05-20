@@ -6,6 +6,8 @@ import {
     Button
 } from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import style from './style';
+
 
 export default class OTP extends Component {
   constructor (props){
@@ -15,7 +17,7 @@ export default class OTP extends Component {
 
   render(){
     return(
-      <View>
+      <View style = {style.wrapper}>
         <Text>Welcome David, </Text>
         <Text>Kindly enter your 8 digits pin from your email...</Text>
         <KeyboardAwareScrollView>
