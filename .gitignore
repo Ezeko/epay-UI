@@ -13,3 +13,5 @@ yarn-error.log
 app.css
 # macOS
 .DS_Store
+yarn.lock
+.vscode
