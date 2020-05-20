@@ -30,6 +30,7 @@ export default class SignUp extends Component {
             autoCompleteType = 'name'
             blurOnSubmit = {true}
             textAlign = 'center'
+            onSubmitEditing = {() => this.lastName.focus()}
           />
         </View>
         <View style = {style.input}>
@@ -40,7 +41,9 @@ export default class SignUp extends Component {
             placeholder = 'Last Name'
             autoCompleteType = 'name'
             blurOnSubmit = {true}
+            ref = {(input)=> this.lastName = input}
             textAlign = 'center'
+            onSubmitEditing = {() => this.email.focus()}
           />
         </View>
         <View style = {style.input}>
@@ -52,6 +55,8 @@ export default class SignUp extends Component {
             autoCompleteType = 'email'
             blurOnSubmit = {true}
             textAlign = 'center'
+            onSubmitEditing = {() => this.telephone.focus()}
+            ref = {(input) => this.email = input}
           />
         </View>
         <View style = {style.input}>
@@ -63,6 +68,8 @@ export default class SignUp extends Component {
             autoCompleteType = 'tel'
             blurOnSubmit = {true}
             textAlign = 'center'
+            onSubmitEditing = {() => this.address.focus()}
+            ref = {(input) => this.telephone = input}
           />
         </View>
         <View style = {style.input}>
@@ -74,6 +81,8 @@ export default class SignUp extends Component {
             autoCompleteType = 'street-address'
             blurOnSubmit = {true}
             textAlign = 'center'
+            onSubmitEditing = {() => this.password.focus()}
+            ref = {(input) => this.address = input}
           />
         </View>
         <View style = {style.input} >
@@ -86,16 +95,32 @@ export default class SignUp extends Component {
             blurOnSubmit = {true}
             secureTextEntry = {true}
             textAlign = 'center'
+            onSubmitEditing = {() => this.props.navigation.navigate('OTP')}
+            ref = {(input) => this.password = input}
+            style = {{fontFamily: 'uber'}}
           />
         </View>
-        <TouchableOpacity onPress = {() => this.props.navigation.navigate('OTP')}>
-          <Text>Register</Text>
-        </TouchableOpacity>
-        <Text>Or</Text>
-        <TouchableOpacity onPress = { () => this.props.navigation.navigate('SignIn')}>
-          <Text>Sign in</Text>
-        </TouchableOpacity>
+
       </KeyboardAwareScrollView>
+
+      <View style = {style.foot}>
+
+        <TouchableOpacity onPress = {() => this.props.navigation.navigate('OTP')} style = {style.reg}>
+          <Text style={style.reg}>Create Account</Text>
+        </TouchableOpacity>
+
+        <View style = {style.signIn}>
+
+          <Text style = {style.signInText}>Or Sign In</Text>
+
+          <TouchableOpacity onPress = { () => this.props.navigation.navigate('SignIn')}>
+            <Text style = {style.signInText2}>Here</Text>
+          </TouchableOpacity>
+
+        </View>
+
+      </View>
+
     </View>
     )
   }
