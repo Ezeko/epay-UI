@@ -2,9 +2,9 @@ import {createStackNavigator} from "react-navigation-stack";
 import {createAppContainer } from "react-navigation";
 
 import Slider from "../screens/Slider/index";
-import SignUp from "../screens/SignUp";
-import OTP from "../screens/OTP";
-import SignIn from "../screens/SignIn"
+import SignUp from "../screens/SignUp/index";
+import OTP from "../screens/OTP/index";
+import SignIn from "../screens/SignIn/index"
 
 const AppNavigator = createStackNavigator(
     {
