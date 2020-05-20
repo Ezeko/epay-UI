@@ -19,10 +19,13 @@ export default {
      marginBottom: height/30,
      height: height/18
  },
- foot: {
-     marginBottom: height/7,
-     marginLeft: height/6, 
-     marginRight: height/6,
+ top: {
+     marginTop: height/8,
+     marginHorizontal: height/8,
+     textAlign: 'center',
+     fontFamily: 'uber',
+     backgroundColor: color.white,
+     borderRadius: 12
 
  },
  reg: {

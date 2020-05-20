@@ -21,8 +21,9 @@ export default class SignIn extends Component {
     render () {
         return(
             <View style = {style.container}>
-                <KeyboardAwareScrollView>
-                    <View>
+                <Text style = {style.top}>SIGN IN</Text>
+                <KeyboardAwareScrollView style = {style.wrapper}>
+                    <View style = {style.input}>
                         <TextInput
                           keyboardType = 'email-address'
                           placeholder = 'email@example.com'
@@ -35,7 +36,7 @@ export default class SignIn extends Component {
                         />
                     </View>
 
-                    <View>
+                    <View style={style.input}>
                         <TextInput
                           keyboardType = 'default'
                           placeholder = 'password'
@@ -46,6 +47,7 @@ export default class SignIn extends Component {
                           onChangeText = {(password) => this.setState({password})}
                           secureTextEntry = {true}
                           ref = {(input) => this.password = input}
+                          style = {{fontFamily: 'uber'}}
                         />
                     </View>
                 </KeyboardAwareScrollView>
