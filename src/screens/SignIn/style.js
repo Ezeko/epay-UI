@@ -11,6 +11,7 @@ export default {
  },
  wrapper: {
     margin: height/8,
+    top: 25,
  },
  input: {
      flex: 1,
@@ -23,7 +24,6 @@ export default {
      marginBottom: height/20,
      textAlign: 'center',
      fontFamily: 'uber',
-     backgroundColor: color.white,
      borderRadius: 12
 
  },

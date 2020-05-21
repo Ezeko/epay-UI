@@ -23,7 +23,7 @@ export default class SignIn extends Component {
             <View style = {style.container}>
                
                 <KeyboardAwareScrollView style = {style.wrapper}>
-                    <Text style = {style.top}>SIGN IN</Text>
+                    <Text style = {style.top}>Welcome Back</Text>
                     <View style = {style.input}>
                         <TextInput
                           keyboardType = 'email-address'
@@ -42,7 +42,7 @@ export default class SignIn extends Component {
                           keyboardType = 'default'
                           placeholder = 'password'
                           textAlign = 'center'
-                          returnKeyType = 'next'
+                          returnKeyType = 'done'
                           autoCompleteType = 'password'
                           onSubmitEditing = {()=> this.handleSubmission}
                           onChangeText = {(password) => this.setState({password})}
@@ -54,6 +54,15 @@ export default class SignIn extends Component {
                     <TouchableOpacity style = {style.button}>
                         <Text style = {style.text}>Submit</Text>
                     </TouchableOpacity>
+                    <View style = {style.signIn}>
+                      <Text style = {{fontFamily: 'uber', fontSize: 13, marginTop: 25}}>No Account Yet? Register</Text>
+                      <TouchableOpacity 
+                      onPress = {()=> this.props.navigation.navigate('SignUp')}
+                      >
+                        <Text style = {{fontFamily: 'uber', fontSize: 16, textAlign: 'center',
+                        color:'white'}}> Here</Text>
+                      </TouchableOpacity>
+                    </View>
                 </KeyboardAwareScrollView>
                 
             </View>
