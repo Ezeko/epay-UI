@@ -3,7 +3,8 @@ import {
     TextInput,
     Text,
     View,
-    TouchableOpacity
+    TouchableOpacity,
+    StatusBar
 } from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import style from './style';
@@ -25,7 +26,7 @@ handleSubmission () {
     render () {
         return(
             <View style = {style.container}>
-               
+               <StatusBar barStyle = 'dark-content' />
                 <KeyboardAwareScrollView style = {style.wrapper}>
                     <Text style = {style.top}>Welcome Back</Text>
                     <View style = {style.input}>

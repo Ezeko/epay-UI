@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {
   TextInput,
   View,
-  Text
+  Text,
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import style from './styles';

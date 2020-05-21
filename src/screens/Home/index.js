@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Text, View, AsyncStorage, ImageBackground, StatusBar} from 'react-native';
+import { Text, View, AsyncStorage, ImageBackground, StatusBar, Image} from 'react-native';
 import style from './style';
 
 
@@ -14,7 +14,7 @@ export default class Home extends Component {
         return(
             <View style = {style.wrapper}>
                 <StatusBar barStyle = 'dark-content' />
-                <ImageBackground source = {require('../../../assets/images/model with box.png')}
+                <ImageBackground source = {require('../../../assets/images/homeImage.png')}
                 style={style.image}
                 >
                     <View>
