@@ -12,12 +12,20 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 export default class SignUp extends Component {
   constructor (props) {
     super(props);
-    this.state = {};
+    this.state = {
+      firstname: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      address: '',
+      password: '',
+    };
   }
 
   componentDidMount () {}
 
   render() {
+    console.log(this.state)
     return(
       <View style = {style.container} >
       <KeyboardAwareScrollView style = {style.wrapper}>
@@ -30,7 +38,9 @@ export default class SignUp extends Component {
             autoCompleteType = 'name'
             blurOnSubmit = {true}
             textAlign = 'center'
+            onChangeText = {(firstname) => this.setState({firstname})}
             onSubmitEditing = {() => this.lastName.focus()}
+            style = {{fontFamily: 'uber'}}
           />
         </View>
         <View style = {style.input}>
@@ -44,6 +54,8 @@ export default class SignUp extends Component {
             ref = {(input)=> this.lastName = input}
             textAlign = 'center'
             onSubmitEditing = {() => this.email.focus()}
+            onChangeText = {(lastName) => this.setState({lastName})}
+            style = {{fontFamily: 'uber'}}
           />
         </View>
         <View style = {style.input}>
@@ -56,7 +68,9 @@ export default class SignUp extends Component {
             blurOnSubmit = {true}
             textAlign = 'center'
             onSubmitEditing = {() => this.telephone.focus()}
+            onChangeText = {(email) => this.setState({email})}
             ref = {(input) => this.email = input}
+            style = {{fontFamily: 'uber'}}
           />
         </View>
         <View style = {style.input}>
@@ -70,6 +84,8 @@ export default class SignUp extends Component {
             textAlign = 'center'
             onSubmitEditing = {() => this.address.focus()}
             ref = {(input) => this.telephone = input}
+            onChangeText = {(phone) => this.setState({phone})}
+            style = {{fontFamily: 'uber'}}
           />
         </View>
         <View style = {style.input}>
@@ -83,6 +99,8 @@ export default class SignUp extends Component {
             textAlign = 'center'
             onSubmitEditing = {() => this.password.focus()}
             ref = {(input) => this.address = input}
+            onChangeText = {(address) => this.setState({address})}
+            style = {{fontFamily: 'uber'}}
           />
         </View>
         <View style = {style.input} >
@@ -97,6 +115,7 @@ export default class SignUp extends Component {
             textAlign = 'center'
             onSubmitEditing = {() => this.props.navigation.navigate('OTP')}
             ref = {(input) => this.password = input}
+            onChangeText = {(password) => this.setState({password})}
             style = {{fontFamily: 'uber'}}
           />
         </View>
