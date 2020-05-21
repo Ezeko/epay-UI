@@ -11,7 +11,7 @@ export default {
  },
  wrapper: {
     margin: height/8,
-    top: 25,
+    top: height/7,
  },
  input: {
      flex: 1,
