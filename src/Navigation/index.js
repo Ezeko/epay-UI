@@ -5,6 +5,7 @@ import Slider from "../screens/Slider/index";
 import SignUp from "../screens/SignUp/index";
 import OTP from "../screens/OTP/index";
 import SignIn from "../screens/SignIn/index"
+import Home from "../screens/Home";
 
 const AppNavigator = createStackNavigator(
     {
@@ -32,7 +33,14 @@ const AppNavigator = createStackNavigator(
             headerShown: false
           }
         },
+        Home: {
+          screen: Home,
+          navigationOptions: {
+            headerShown: false
+          }
+        },
     },
+    
     {
         initialRouteName: "Slider"
     }
