@@ -43,7 +43,9 @@ export default class Slider extends Component{
                 </View>
 
                 <View style={styles.firstView}>
-                    <ImageBackground source = {require('../../../assets/images/education.png')} style={styles.firstView.image} >
+                    <ImageBackground source = {require('../../../assets/images/education.png')} 
+                    style={styles.firstView.image} 
+                    >
                         <View style={styles.text}>
                             <Text style={styles.firstText}> Education</Text>
                             <Text style={styles.secondText}> Get Student Loan Anywhere in Nigeria</Text>
@@ -54,7 +56,7 @@ export default class Slider extends Component{
                         </TouchableOpacity>
                     </ImageBackground>
                 </View>
-                
+
             </Swiper>
         )
     }
