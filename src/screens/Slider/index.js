@@ -19,6 +19,7 @@ export default class Slider extends Component{
     }
 
     render(){
+        const { navigation } = this.props;
         return(
             <Swiper activeDotColor='yellow'>
                 <View style= {styles.firstView}>
@@ -44,7 +45,8 @@ export default class Slider extends Component{
                             <Text style={styles.firstText}> Education</Text>
                             <Text style={styles.secondText}> Get Student Loan Anywhere in Nigeria</Text>
                         </View>
-                        <TouchableOpacity>
+                        <TouchableOpacity 
+                         onPress =  {() => navigation.navigate('SignUp')}>
                             <Text style={styles.touchable}>Get Started</Text>
                         </TouchableOpacity>
                     </ImageBackground>
