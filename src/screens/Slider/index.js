@@ -10,16 +10,17 @@ import Swiper from 'react-native-swiper';
 import styles from './styles';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+
 export default class Slider extends Component{
     constructor (props){
         super(props);
-        this.state = {
-
-        };
+        this.state = {};
     }
 
     render(){
+
         const { navigation } = this.props;
+
         return(
             <Swiper activeDotColor='yellow'>
                 <View style= {styles.firstView}>
@@ -31,6 +32,7 @@ export default class Slider extends Component{
                         
                     </ImageBackground>
                 </View>
+
                 <View>
                     <ImageBackground source = {require('../../../assets/images/Housing.png')} style = {styles.firstView.image} >
                         <View style={styles.text}>
@@ -39,6 +41,7 @@ export default class Slider extends Component{
                         </View>
                     </ImageBackground>
                 </View>
+
                 <View style={styles.firstView}>
                     <ImageBackground source = {require('../../../assets/images/education.png')} style={styles.firstView.image} >
                         <View style={styles.text}>
@@ -51,6 +54,7 @@ export default class Slider extends Component{
                         </TouchableOpacity>
                     </ImageBackground>
                 </View>
+                
             </Swiper>
         )
     }
