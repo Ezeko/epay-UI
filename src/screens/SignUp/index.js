@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {
   TextInput,
   View,
-  Text
+  Text,
+  StatusBar
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import style from './styles';
@@ -28,6 +29,7 @@ export default class SignUp extends Component {
     console.log(this.state)
     return(
       <View style = {style.container} >
+      <StatusBar barStyle = 'dark-content' />
       <KeyboardAwareScrollView style = {style.wrapper}>
         <View style = {style.input}>
           <TextInput

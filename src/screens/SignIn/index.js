@@ -3,7 +3,8 @@ import {
     TextInput,
     Text,
     View,
-    TouchableOpacity
+    TouchableOpacity,
+    StatusBar
 } from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import style from './style';
@@ -17,11 +18,15 @@ export default class SignIn extends Component {
         }
     }
 
+handleSubmission () {
+    console.log('signed in')
+    this.props.navigation.navigate('Home');
+}
 
     render () {
         return(
             <View style = {style.container}>
-               
+               <StatusBar barStyle = 'dark-content' />
                 <KeyboardAwareScrollView style = {style.wrapper}>
                     <Text style = {style.top}>Welcome Back</Text>
                     <View style = {style.input}>
@@ -44,14 +49,17 @@ export default class SignIn extends Component {
                           textAlign = 'center'
                           returnKeyType = 'done'
                           autoCompleteType = 'password'
-                          onSubmitEditing = {()=> this.handleSubmission}
+                          onSubmitEditing = {()=> this.handleSubmission()}
                           onChangeText = {(password) => this.setState({password})}
                           secureTextEntry = {true}
                           ref = {(input) => this.password = input}
                           style = {{fontFamily: 'uber'}}
                         />
                     </View>
-                    <TouchableOpacity style = {style.button}>
+                    <TouchableOpacity 
+                      style = {style.button} 
+                      onPress = {() => this.handleSubmission()}
+                    >
                         <Text style = {style.text}>Submit</Text>
                     </TouchableOpacity>
                     <View style = {style.signIn}>
