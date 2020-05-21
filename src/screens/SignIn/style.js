@@ -20,29 +20,28 @@ export default {
      height: height/18
  },
  top: {
-     marginTop: height/8,
-     marginHorizontal: height/8,
+     marginBottom: height/20,
      textAlign: 'center',
      fontFamily: 'uber',
      backgroundColor: color.white,
      borderRadius: 12
 
  },
- reg: {
+ button: {
     backgroundColor: color.black,
-    color: color.whiteSmoke,
-    height: height/22,
-    width: '100%',
-    fontSize: height/30,
-    textAlign: 'center',
-    fontFamily: 'uber'
+    borderRadius: 12,
+    height: 30
+
  },
  signIn: {
      flexDirection: 'row',
      alignItems: 'space-between',
      justifyContents: 'center',
  },
- signInText: {
-    fontFamily: 'uber'
+ text: {
+    fontFamily: 'uber',
+    fontSize: 25,
+    textAlign: 'center',
+    color: color.white
  }
 }

@@ -3,7 +3,7 @@ import {
     TextInput,
     Text,
     View,
-    Button
+    TouchableOpacity
 } from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import style from './style';
@@ -21,8 +21,9 @@ export default class SignIn extends Component {
     render () {
         return(
             <View style = {style.container}>
-                <Text style = {style.top}>SIGN IN</Text>
+               
                 <KeyboardAwareScrollView style = {style.wrapper}>
+                    <Text style = {style.top}>SIGN IN</Text>
                     <View style = {style.input}>
                         <TextInput
                           keyboardType = 'email-address'
@@ -50,7 +51,11 @@ export default class SignIn extends Component {
                           style = {{fontFamily: 'uber'}}
                         />
                     </View>
+                    <TouchableOpacity style = {style.button}>
+                        <Text style = {style.text}>Submit</Text>
+                    </TouchableOpacity>
                 </KeyboardAwareScrollView>
+                
             </View>
         )
     }
