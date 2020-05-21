@@ -45,7 +45,8 @@ export default {
     fontFamily: 'uber'
  },
  signInText2: {
-    marginLeft: 32,
+    marginLeft: 10,
+    textAlign: 'center',
     color: 'white',
     fontSize: 18,
     fontFamily: 'uber'
