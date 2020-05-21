@@ -18,24 +18,30 @@ export default class OTP extends Component {
   }
 
   render(){
+    console.log(this.state)
     return(
       <View style = {style.container}>
-          <View style = {style.wrapper} >
+
+        <View style = {style.wrapper} >
+
           <Text style = {style.text}>Welcome David, </Text>
           <Text style = {{fontFamily: 'uber-b'}}>Kindly enter your 8 digits pin from your email...</Text>
-        <KeyboardAwareScrollView>
-          <TextInput
-            returnKeyType = 'send'
-            keyboardType = 'number-pad'
-            textContentType = 'oneTimeCode'
-            placeholder = '8 - Digits OTP'
-            maxLength = {8}
-            returnKeyType = 'send'
-            textAlign = 'center'
-            style = {style.input}
-          />
-        </KeyboardAwareScrollView>
-          </View>
+
+          <KeyboardAwareScrollView>
+            <TextInput
+              returnKeyType = 'send'
+              keyboardType = 'number-pad'
+              textContentType = 'oneTimeCode'
+              placeholder = '8 - Digits OTP'
+              maxLength = {8}
+              returnKeyType = 'send'
+              textAlign = 'center'
+              onChangeText = {(OTP) => this.setState({OTP})}
+              style = {style.input}
+            />
+
+          </KeyboardAwareScrollView>
+        </View>
 
       </View>
     );
