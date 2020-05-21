@@ -17,6 +17,10 @@ export default class SignIn extends Component {
         }
     }
 
+handleSubmission () {
+    console.log('signed in')
+    this.props.navigation.navigate('Home');
+}
 
     render () {
         return(
@@ -44,14 +48,17 @@ export default class SignIn extends Component {
                           textAlign = 'center'
                           returnKeyType = 'done'
                           autoCompleteType = 'password'
-                          onSubmitEditing = {()=> this.handleSubmission}
+                          onSubmitEditing = {()=> this.handleSubmission()}
                           onChangeText = {(password) => this.setState({password})}
                           secureTextEntry = {true}
                           ref = {(input) => this.password = input}
                           style = {{fontFamily: 'uber'}}
                         />
                     </View>
-                    <TouchableOpacity style = {style.button}>
+                    <TouchableOpacity 
+                      style = {style.button} 
+                      onPress = {() => this.handleSubmission()}
+                    >
                         <Text style = {style.text}>Submit</Text>
                     </TouchableOpacity>
                     <View style = {style.signIn}>
