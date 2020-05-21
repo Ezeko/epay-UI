@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
-import { Text, View, AsyncStorage, ImageBackground, StatusBar, Image} from 'react-native';
+import { 
+    Text, 
+    View,
+    AsyncStorage, 
+    ImageBackground, 
+    StatusBar,
+} from 'react-native';
 import style from './style';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 export default class Home extends Component {
@@ -18,8 +25,18 @@ export default class Home extends Component {
                 style={style.image}
                 >
                     <View>
-                        <Text>This is the home screen</Text>
+                        <Text style = {style.welcome}>Welcome to Epay</Text>
                     </View>
+
+                    <View style = {style.foot}>
+                        <TouchableOpacity style = {style.categoryView}>
+                            <Text style = {style.category}>Categories</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Text style = {style.about}>About Epay</Text>
+                        </TouchableOpacity>
+                    </View>
+                    
                 </ImageBackground>
 
             </View>

@@ -10,7 +10,9 @@ export default {
     fontFamily: 'uber'
  },
  wrapper: {
-    margin: height/8,
+    marginHorizontal: height/8,
+    marginVertical: height/22,
+    
  },
  input: {
      flex: 1,
