@@ -36,83 +36,79 @@ export default class Sidebar extends Component {
 
                     <SideBar
                     text = 'Account'
-                    svg = 'HomeBarIcon14.svg'
+                    svg = '../../../assets/images/HomeBarIcon14.svg'
                     />
 
                     <SideBar 
                     text = 'Transfer Funds'
-                    svg = 'transferfunds.svg'
+                    svg = '../../../assets/images/transferfunds.svg'
                     />
 
                     <SideBar 
                     text = 'Card Requests'
-                    svg = 'CardRequest.svg'
+                    svg = '../../../assets/images/CardRequest.svg'
                     />
 
                     <SideBar 
                     text = 'Cards'
-                    svg = 'Cards.svg'
+                    svg = '../../../assets/images/Cards.svg'
 
                     />
 
                     <SideBar 
                     text = 'Lifestyle & Travel'
-                    svg = 'LifestyleAndTravel.svg'
+                    svg = '../../../assets/images/LifestyleAndTravel.svg'
                     />
 
                     <SideBar 
                     text = 'Self Service'
-                    svg = 'SelfService.svg'
+                    svg = '../../../assets/images/SelfService.svg'
                     />
 
                     <SideBar 
                     text = 'Loans'
-                    svg = 'Loans.svg'
+                    svg = '../../../assets/images/Loans.svg'
                     />
 
                     <SideBar 
                     text = 'Notifications'
-                    svg = 'Notifications.svg'
+                    svg = '../../../assets/images/Notifications.svg'
                     />
 
                     <SideBar 
                     text = 'My profile'
-                    svg = 'MyProfile.svg'
+                    svg = '../../../assets/images/MyProfile.svg'
                     />
                     
                     <SideBar 
                     text = 'Log out'
-                    svg = 'logOut.svg'
-                    route = ''
+                    svg = '../../../assets/images/logOut.svg'
                     />
 
                     <SideBar 
                     text = 'Bill Payment'
-                    svg = 'billspayment.svg'
+                    svg = '../../../assets/images/billspayment.svg'
                     />
 
                     <SideBar 
                     text = 'Airtime'
-                    svg = 'airtime.svg'
+                    svg = '../../../assets/images/airtime.svg'
                     />
 
 
                     <SideBar 
                     text = 'Savings'
-                    svg = 'Savings.svg'
-                    route = ''
+                    svg = '../../../assets/images/Savings.svg'
                     />
 
                     <SideBar 
                     text = 'Investment'
-                    svg = 'investment.svg'
-                    route = ''
+                    svg = '../../../assets/images/investment.svg'
                     />
             
                     <SideBar 
                     text = 'Cryptocurrency'
-                    icon = {{name: 'logo-bitcoin', type: 'ionicon'}}
-                    route = ''
+                    svg = '../../../assets/images/cryptocurrency.svg'
                     />
 
                 </View>
