@@ -31,81 +31,87 @@ export default class Sidebar extends Component {
                 <View>
                     <SideBar 
                     text = 'Home'
-                    IconName = 'menu'
+                    icon = {{name: 'home', type: 'simple-line-icon'}}
+                    />
+
+                    <SideBar
+                    text = 'Account'
+                    svg = 'HomeBarIcon14.svg'
                     />
 
                     <SideBar 
                     text = 'Transfer Funds'
-                    IconName = 'wallet'
+                    svg = 'transferfunds.svg'
                     />
 
                     <SideBar 
                     text = 'Card Requests'
-                    IconName = 'menu'
+                    svg = 'CardRequest.svg'
                     />
 
                     <SideBar 
                     text = 'Cards'
-                    IconName = 'wallet'
+                    svg = 'Cards.svg'
+
                     />
-                    
+
                     <SideBar 
                     text = 'Lifestyle & Travel'
-                    IconName = 'menu'
+                    svg = 'LifestyleAndTravel.svg'
                     />
 
                     <SideBar 
                     text = 'Self Service'
-                    IconName = 'wallet'
+                    svg = 'SelfService.svg'
                     />
 
                     <SideBar 
                     text = 'Loans'
-                    IconName = 'menu'
+                    svg = 'Loans.svg'
                     />
 
                     <SideBar 
                     text = 'Notifications'
-                    IconName = 'wallet'
+                    svg = 'Notifications.svg'
                     />
 
                     <SideBar 
                     text = 'My profile'
-                    IconName = 'menu'
+                    svg = 'MyProfile.svg'
                     />
                     
                     <SideBar 
                     text = 'Log out'
-                    IconName = 'wallet'
+                    svg = 'logOut.svg'
                     route = ''
                     />
 
                     <SideBar 
                     text = 'Bill Payment'
-                    IconName = 'wallet'
+                    svg = 'billspayment.svg'
                     />
 
                     <SideBar 
                     text = 'Airtime'
-                    IconName = 'wallet'
+                    svg = 'airtime.svg'
                     />
 
 
                     <SideBar 
                     text = 'Savings'
-                    IconName = 'wallet'
+                    svg = 'Savings.svg'
                     route = ''
                     />
 
                     <SideBar 
                     text = 'Investment'
-                    IconName = 'wallet'
+                    svg = 'investment.svg'
                     route = ''
                     />
             
                     <SideBar 
                     text = 'Cryptocurrency'
-                    IconName = 'wallet'
+                    icon = {{name: 'logo-bitcoin', type: 'ionicon'}}
                     route = ''
                     />
 
