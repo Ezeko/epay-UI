@@ -14,4 +14,5 @@ app.css
 # macOS
 .DS_Store
 yarn.lock
+package-lock.json
 .vscode

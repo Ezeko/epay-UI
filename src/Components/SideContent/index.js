@@ -20,13 +20,17 @@ export default class SideBarContent extends Component {
                 <TouchableOpacity onPress = {() => this.props.navigation.navigate(route)}>
                     <View>
                         <SvgUri
-                        uri = {require(`../../../assets/images/${this.props.svg}`)}
+                        uri = {require(`${this.props.svg}`)}
                         />
                     </View>
-                    <Icon
-                    type = {this.props.icon.type}
-                    name = {this.props.icon.name} //will take value from the parent component
-                    />
+                    {this.props.icon ?
+                        <Icon
+                        type = {this.props.icon.type}
+                        name = {this.props.icon.name} //will take value from the parent component
+                        />
+                        :
+                        console.log('icon is not set')
+                    }
 
                     <Text>{this.props.text}</Text> 
                 </TouchableOpacity>
