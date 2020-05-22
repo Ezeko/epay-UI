@@ -8,8 +8,9 @@ import {
 } from 'react-native';
 import style from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Drawer} from 'react-native-gesture-handler/DrawerLayout';
+import { Drawer } from 'react-native-gesture-handler/DrawerLayout';
 import Side from '../../Components/SideBar/index';
+import { Icon } from 'react-native-vector-icons/Icon';
 
 
 
@@ -31,7 +32,14 @@ export default class Home extends Component {
             >
             <View style = {style.wrapper}>
                 <StatusBar barStyle = 'dark-content' />
-                <Side />
+                <TouchableOpacity
+                onPress={() => this.drawer._root.open()}
+                >
+                    <Icon
+                    type = 'simple-line-icon'
+                    name = 'menu'
+                    />
+                </TouchableOpacity>
                 
 
                 <ImageBackground source = {require('../../../assets/images/homeImage.png')}
