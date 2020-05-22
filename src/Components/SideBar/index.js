@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Text, View, TouchableOpacity, Image} from 'react-native';
 import {Icon} from 'react-native-elements';
 import SideBar from '../SideContent/index';
+import style from './style'
 
 export default class Sidebar extends Component {
     constructor (props) {
@@ -13,11 +14,12 @@ export default class Sidebar extends Component {
     render() {
         return(
             <View>
-                <View>
+                <View style = {style.head}>
                     <Image source = {require('../../../assets/images/ePayLogo.png')} />
                     <Icon
                     type = 'ionicon'
-                    name='chevron-back-outline'/>
+                    name='ios-arrow-dropleft'/>
+
                 </View>
 
                 {
