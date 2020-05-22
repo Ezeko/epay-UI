@@ -8,6 +8,8 @@ import {
 } from 'react-native';
 import style from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Drawer} from 'react-native-gesture-handler/DrawerLayout';
+
 
 
 export default class Home extends Component {
