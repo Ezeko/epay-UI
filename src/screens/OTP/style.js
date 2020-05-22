@@ -6,7 +6,7 @@ let height = Dimensions.get("window").height;
 export default {
  container: {
     flex: 1,
-    backgroundColor: 'orange',
+    backgroundColor: color.ePayOrange,
     fontFamily: 'uber'
  },
  wrapper: {
