@@ -3,24 +3,35 @@ import {Text, View} from 'react-native';
 import {Icon} from 'react-native-elements';
 import style from './style'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { SvgUri } from 'react-native-svg';
+import SvgUri from 'react-native-svg-uri';
 
 
 export default class SideBarContent extends Component {
     constructor (props) {
         super(props);
-        this.state= {};
+        this.state= {
+            svg: '',
+            name: '',
+            icon: '',
+            text: ''
+        };
     }
     
+    componentDidMount () {
+
+        this.setState({svg: this.props.svg,} )
+    }
     
     render() {
-        const {route} = this.props
+        console.log('svg' + this.state.svg)
+        //const data = import * from (this.props.svg)
+        console.log('dat ' + this.props.svg)
         return(
             <View>
                 <TouchableOpacity onPress = {() => console.log('this.props.navigation.navigate(route)')}>
                     <View>
                         <SvgUri
-                        uri = {this.props.svg ? this.props.svg : ''}
+                        source = {this.props.svg}
                         />
                     </View>
                     {this.props.icon ?
