@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, Image} from 'react-native';
 import {Icon} from 'react-native-elements';
 import style from './style'
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -9,12 +9,7 @@ import SvgUri from 'react-native-svg-uri';
 export default class SideBarContent extends Component {
     constructor (props) {
         super(props);
-        this.state= {
-            svg: '',
-            name: '',
-            icon: '',
-            text: ''
-        };
+
     }
     
     componentDidMount () {
@@ -30,9 +25,7 @@ export default class SideBarContent extends Component {
             <View>
                 <TouchableOpacity onPress = {() => console.log('this.props.navigation.navigate(route)')}>
                     <View>
-                        <SvgUri
-                        source = {this.props.svg}
-                        />
+                        <Image source = {this.props.img} />
                     </View>
                     {this.props.icon ?
                         <Icon

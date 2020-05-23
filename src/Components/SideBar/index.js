@@ -38,79 +38,79 @@ export default class Sidebar extends Component {
 
                     <SideBar
                     text = 'Account'
-                    svg = {require('../../../assets/images/HomeBarIcon14.svg')}
+                    img = {require('../../../logo/images/HomeBarIcon14.png')}
                     />
 
                     <SideBar 
                     text = 'Transfer Funds'
-                    svg = {require('../../../assets/images/transferfunds.svg')}
+                    img = {require('../../../logo/images/transferfunds.png')}
                     />
 
                     <SideBar 
                     text = 'Card Requests'
-                    svg = {require('../../../assets/images/CardRequest.svg')}
+                    img = {require('../../../logo/images/CardRequest.png')}
                     />
 
                     <SideBar 
                     text = 'Cards'
-                    svg = {require('../../../assets/images/Card.svg')}
+                    img = {require('../../../logo/images/Card.png')}
 
                     />
 
                     <SideBar 
                     text = 'Lifestyle & Travel'
-                    svg = {require('../../../assets/images/LifestyleAndTravel.svg')}
+                    img = {require('../../../assets/logo/LifestyleAndTravel.png')}
                     />
 
                     <SideBar 
                     text = 'Self Service'
-                    svg = {require('../../../assets/images/SelfService.svg')}
+                    img = {require('../../../assets/logo/SelfService.png')}
                     />
 
                     <SideBar 
                     text = 'Loans'
-                    svg = {require('../../../assets/images/Loans.svg')}
+                    img = {require('../../../assets/logo/Loans.png')}
                     />
 
                     <SideBar 
                     text = 'Notifications'
-                    svg = {require('../../../assets/images/Notifications.svg')}
+                    img = {require('../../../assets/logo/Notifications.png')}
                     />
 
                     <SideBar 
                     text = 'My profile'
-                    svg = {require('../../../assets/images/MyProfile.svg')}
+                    img = {require('../../../assets/logo/MyProfile.png')}
                     />
                     
                     <SideBar 
                     text = 'Log out'
-                    svg = {require('../../../assets/images/logOut.svg')}
+                    image = {require('../../../assets/logo/logOut.png')}
                     />
 
                     <SideBar 
                     text = 'Bill Payment'
-                    svg = {require('../../../assets/images/billspayment.svg')}
+                    img = {require('../../../assets/logo/billspayment.png')}
                     />
 
                     <SideBar 
                     text = 'Airtime'
-                    svg = {require('../../../assets/images/airtime.svg')}
+                    img = {require('../../../assets/logo/airtime.png')}
                     />
 
 
                     <SideBar 
                     text = 'Savings'
-                    svg = {require('../../../assets/images/Savings.svg')}
+                    img = {require('../../../assets/logo/Savings.img')}
                     />
 
                     <SideBar 
                     text = 'Investment'
-                    svg = {require('../../../assets/images/investment.svg')}
+                    img = {require('../../../assets/logo/investment.png')}
                     />
             
                     <SideBar 
                     text = 'Cryptocurrency'
-                    svg = {require('../../../assets/images/cryptocurrency.svg')}
+                    img = {require('../../../assets/logo/cryptocurrency.png')}
                     />
 
                 </View>
