@@ -3,4 +3,10 @@ import {Dimensions} from "react-native";
 let width = Dimensions.get("window").width;
 let height = Dimensions.get("window").height;
 
-export default {}
+export default {
+    head: {
+        flex: 1,
+        flexDirection: 'row',
+        margin: 5,
+    }
+}

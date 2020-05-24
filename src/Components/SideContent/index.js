@@ -1,31 +1,34 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, Image} from 'react-native';
 import {Icon} from 'react-native-elements';
 import style from './style'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { SvgUri } from 'react-native-svg';
+import SvgUri from 'react-native-svg-uri';
 
 
 export default class SideBarContent extends Component {
     constructor (props) {
         super(props);
-        
+
     }
     
+    componentDidMount () {
+
+        this.setState({svg: this.props.svg,} )
+    }
     
     render() {
-        const {route} = this.props.route
+        console.log('svg' + this.state.svg)
+        //const data = import * from (this.props.svg)
+        console.log('dat ' + this.props.svg)
         return(
             <View>
-                <TouchableOpacity onPress = {() => this.props.navigation.navigate(route)}>
+                <TouchableOpacity onPress = {() => console.log('this.props.navigation.navigate(route)')}>
                     <View>
-                        <SvgUri
-                        uri = {require(`${this.props.svg}`)}
-                        />
+                        <Image source = {this.props.img} />
                     </View>
                     {this.props.icon ?
                         <Icon
-                        type = {this.props.icon.type}
                         name = {this.props.icon.name} //will take value from the parent component
                         />
                         :

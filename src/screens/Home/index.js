@@ -8,8 +8,9 @@ import {
 } from 'react-native';
 import style from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Drawer} from 'react-native-gesture-handler/DrawerLayout';
+import { Drawer } from 'native-base';
 import Side from '../../Components/SideBar/index';
+import { Icon } from 'react-native-elements';
 
 
 
@@ -26,19 +27,26 @@ export default class Home extends Component {
             ref={ref => {
                 this.drawer = ref;
                 }}
+            
             content={<Side navigation={this.props.navigation} />} 
             onClose={() => this.drawer._root.close()}
             >
             <View style = {style.wrapper}>
                 <StatusBar barStyle = 'dark-content' />
-                <Side />
+                <TouchableOpacity
+                onPress={() => this.drawer._root.open()}
+                >
+                    <Icon
+                    name = 'menu'
+                    />
+                </TouchableOpacity>
                 
 
                 <ImageBackground source = {require('../../../assets/images/homeImage.png')}
                 style={style.image}
                 >
                     <View>
-                        <Text style = {style.welcome}>Welcome to Epay</Text>
+                        <Text style = {style.welcome}>Welcome to ePay</Text>
                     </View>
 
                     <View style = {style.foot}>
@@ -58,4 +66,4 @@ export default class Home extends Component {
     }
 }
 
-Drawer.defaultProps.styles.mainOverlay.elevation = 0;
+//Drawer.defaultProps.styles.mainOverlay.elevation = 0;
