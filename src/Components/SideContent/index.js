@@ -12,15 +12,8 @@ export default class SideBarContent extends Component {
 
     }
     
-    componentDidMount () {
-
-        this.setState({svg: this.props.svg,} )
-    }
     
     render() {
-        console.log('svg' + this.state.svg)
-        //const data = import * from (this.props.svg)
-        console.log('dat ' + this.props.svg)
         return(
             <View>
                 <TouchableOpacity onPress = {() => console.log('this.props.navigation.navigate(route)')}>
