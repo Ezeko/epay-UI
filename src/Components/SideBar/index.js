@@ -17,8 +17,8 @@ export default class Sidebar extends Component {
                 <View style = {style.head}>
                     <Image source = {require('../../../assets/images/ePayLogo.png')} />
                     <Icon
-                    type = 'ionicon'
-                    name='ios-arrow-dropleft'/>
+                    type = 'simple-line-icon'
+                    name='arrow-left'/>
 
                 </View>
 
