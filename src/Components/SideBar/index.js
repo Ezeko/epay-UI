@@ -38,22 +38,22 @@ export default class Sidebar extends Component {
 
                     <SideBar
                     text = 'Account'
-                    img = {require('../../../logo/images/HomeBarIcon14.png')}
+                    img = {require('../../../assets/logo/HomeBarIcon14.png')}
                     />
 
                     <SideBar 
                     text = 'Transfer Funds'
-                    img = {require('../../../logo/images/transferfunds.png')}
+                    img = {require('../../../assets/logo/transferfunds.png')}
                     />
 
                     <SideBar 
                     text = 'Card Requests'
-                    img = {require('../../../logo/images/CardRequest.png')}
+                    img = {require('../../../assets/logo/CardRequest.png')}
                     />
 
                     <SideBar 
                     text = 'Cards'
-                    img = {require('../../../logo/images/Card.png')}
+                    img = {require('../../../assets/logo/Card.png')}
 
                     />
 
@@ -100,7 +100,7 @@ export default class Sidebar extends Component {
 
                     <SideBar 
                     text = 'Savings'
-                    img = {require('../../../assets/logo/Savings.img')}
+                    img = {require('../../../assets/logo/Savings.png')}
                     />
 
                     <SideBar 
