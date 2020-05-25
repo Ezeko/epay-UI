@@ -6,6 +6,7 @@ import SignUp from "../screens/SignUp/index";
 import OTP from "../screens/OTP/index";
 import SignIn from "../screens/SignIn/index"
 import Home from "../screens/Home";
+import HomeX from "../screens/Home2/index"
 
 const AppNavigator = createStackNavigator(
     {
@@ -35,6 +36,12 @@ const AppNavigator = createStackNavigator(
         },
         Home: {
           screen: Home,
+          navigationOptions: {
+            headerShown: false
+          }
+        },
+        HomeX: {
+          screen: HomeX,
           navigationOptions: {
             headerShown: false
           }

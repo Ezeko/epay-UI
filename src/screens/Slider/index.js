@@ -28,7 +28,7 @@ export default class Slider extends Component{
                     <ImageBackground source ={require('../../../assets/images/image1.png')} style ={styles.firstView.image} >
                         <View style={styles.text}>
                             <Text style={styles.firstText}> Travel</Text>
-                            <Text style={styles.secondText}> Travel the World with style and Comfort with EPay Travel</Text>
+                            <Text style={styles.secondText}> Travel the World with style and Comfort with ePay Travel</Text>
                         </View>
                         
                     </ImageBackground>

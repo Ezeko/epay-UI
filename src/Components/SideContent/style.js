@@ -5,29 +5,46 @@ let height = Dimensions.get("window").height;
 
 export default {
     text: {
-        color: color.white,
-        fontFamily: 'uber-b',
+        color: color.ePayOrange,
+        fontFamily: 'uber',
         flex: 1,
-        fontSize: 22,
+        fontSize: 15,
 
     },
     container: {
         flex:1,
-        flexDirection: 'row',
+        //flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'flex-end'
+        justifyContent: 'center',
+        width: '100%'
         
     },
     icon: {
         marginLeft: width/30,
-        marginRight: width/25
+        marginRight: width/27,
+        marginTop: 5,
+        alignItems: 'center',
+        justifyContent: 'flex-start',
     },
     textView: {
         flex: 1,
-        flexDirection: 'row',
-        alignItems: 'flex-end',
-        justifyContent: 'flex-start',
+       // flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
         alignSelf: 'stretch',
         marginLeft: 5,
-    }
+    },
+    sideBar: {
+        flex: 1,
+        width: width/4,
+        alignItems: 'center',
+        justifyContent: 'center',
+        elevation: 2,
+        borderColor: color.whiteOff,
+        borderWidth: 2,
+        marginLeft: width/50,
+        height: height/8
+        
+    },
+ 
 }
