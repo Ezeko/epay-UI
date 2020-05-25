@@ -68,7 +68,7 @@ handleSubmission () {
                       onPress = {()=> this.props.navigation.navigate('SignUp')}
                       >
                         <Text style = {{fontFamily: 'uber', fontSize: 16, textAlign: 'center',
-                        color:'white'}}> Here</Text>
+                        color:'coral'}}> Here</Text>
                       </TouchableOpacity>
                     </View>
                 </KeyboardAwareScrollView>

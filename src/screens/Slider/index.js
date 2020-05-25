@@ -24,7 +24,7 @@ export default class Slider extends Component{
             
             <Swiper activeDotColor='yellow'>
                 <View style= {styles.firstView}>
-                <StatusBar barStyle = 'dark-content' />
+                <StatusBar barStyle = 'light-content' />
                     <ImageBackground source ={require('../../../assets/images/image1.png')} style ={styles.firstView.image} >
                         <View style={styles.text}>
                             <Text style={styles.firstText}> Travel</Text>

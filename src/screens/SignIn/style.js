@@ -6,7 +6,7 @@ let height = Dimensions.get("window").height;
 export default {
  container: {
     flex: 1,
-    backgroundColor: color.ePayOrange,
+    backgroundColor: color.white,
     fontFamily: 'uber'
  },
  wrapper: {
@@ -15,10 +15,11 @@ export default {
  },
  input: {
      flex: 1,
-     backgroundColor: color.white,
+     borderColor: color.ePayOrange,
      borderRadius: 8,
      marginBottom: height/30,
-     height: height/18
+     height: height/18,
+     borderWidth: 2
  },
  top: {
      marginBottom: height/20,
@@ -28,7 +29,8 @@ export default {
 
  },
  button: {
-    backgroundColor: color.black,
+    backgroundColor: color.ePayOrange,
+    elevation: 2,
     borderRadius: 12,
     height: 30
 

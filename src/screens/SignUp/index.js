@@ -127,7 +127,9 @@ export default class SignUp extends Component {
       <View style = {style.foot}>
 
         <TouchableOpacity onPress = {() => this.props.navigation.navigate('OTP')} style = {style.reg}>
-          <Text style={style.reg}>Create Account</Text>
+          <View style ={style.regView} >
+            <Text style={style.reg}>Create Account</Text>
+          </View>
         </TouchableOpacity>
 
         <View style = {style.signIn}>
