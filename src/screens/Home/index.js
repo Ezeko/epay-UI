@@ -36,9 +36,13 @@ export default class Home extends Component {
                 <TouchableOpacity
                 onPress={() => this.drawer._root.open()}
                 >
-                    <Icon
-                    name = 'menu'
-                    />
+                    <View >
+                        <Icon
+                        style = {style.icon}
+                        name = 'menu'
+                        />
+                    </View>
+                   
                 </TouchableOpacity>
                 
 
@@ -54,7 +58,7 @@ export default class Home extends Component {
                             <Text style = {style.category}>Categories</Text>
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <Text style = {style.about}>About Epay</Text>
+                            <Text style = {style.about}>About ePay</Text>
                         </TouchableOpacity>
                     </View>
                     

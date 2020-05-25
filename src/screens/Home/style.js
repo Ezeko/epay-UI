@@ -13,9 +13,9 @@ export default {
         width,
     },
     welcome: {
-        fontFamily: 'uber-b',
+        fontFamily: 'uber',
         fontSize: 22,
-        top: 25,
+        top: 20,
         left: 12
     },
     foot: {
@@ -28,8 +28,6 @@ export default {
         fontFamily: 'uber-b',
         fontSize: 26,
         backgroundColor: color.white,
-        border: 2,
-        border: 'coral',
         borderRadius: 20,
         textAlign: 'center',
         width: width/2.2,
@@ -40,10 +38,14 @@ export default {
         fontFamily: 'uber-b',
         fontSize: 26,
         backgroundColor: color.ePayOrange,
-        border: 2,
-        border: '#f58635',
+        //border: 2,
+        //border: '#f58635',
         borderRadius: 20,
         textAlign: 'center',
         width: width/2,
+    },
+    icon: {
+        marginRight: width/1.1,
+        marginTop: 10,
     }
 }
