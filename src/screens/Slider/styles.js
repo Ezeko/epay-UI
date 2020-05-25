@@ -35,7 +35,7 @@ export default{
         alignItems: 'flex-end',
         fontFamily: 'uber-b',
         marginLeft: width/1.5,
-        marginBottom: height/9,
+        marginBottom: height/14,
         fontSize: width/17,
 
     }
