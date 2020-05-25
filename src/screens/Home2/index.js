@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import style from './style';
-import Side from '../../Components/SideBar/index';
+import Side from '../../Components/HomeDisplay/index';
 
 
 export default class Home2 extends Component {
