@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, Image} from 'react-native';
+import {Text, View, Image, ScrollView} from 'react-native';
 import {Icon} from 'react-native-elements';
 import style from './style'
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -15,21 +15,27 @@ export default class SideBarContent extends Component {
     
     render() {
         return(
-            <View>
-                <TouchableOpacity onPress = {() => console.log('this.props.navigation.navigate(route)')}>
-                    <View>
-                        <Image source = {this.props.img} />
+            <View >
+                <TouchableOpacity onPress = {() => console.log('this.props.navigation.navigate(route)')} 
+                style = {style.container}
+                >
+                    <View style = {style.icon}>
+                        {this.props.icon ?
+                            <Icon
+                            style = {{backgroundColor: 'coral'}}
+                            name = {this.props.icon.name} //will take value from the parent component
+                            />
+                            :
+                            <Image source = {this.props.img} />
+                        }
                     </View>
-                    {this.props.icon ?
-                        <Icon
-                        name = {this.props.icon.name} //will take value from the parent component
-                        />
-                        :
-                        console.log('icon is not set')
-                    }
 
-                    <Text>{this.props.text}</Text> 
+                    <View style = {style.textView}>
+                    <Text style = {style.text}>{this.props.text}</Text>
+                    </View>
+
                 </TouchableOpacity>
+               
             </View>
         )
     }

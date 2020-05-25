@@ -4,9 +4,34 @@ let width = Dimensions.get("window").width;
 let height = Dimensions.get("window").height;
 
 export default {
-    head: {
+    wrapper: {
         flex: 1,
+        marginTop: height/20,
+        
+    },
+    head: {
+        marginTop: height/28,
         flexDirection: 'row',
         margin: 5,
+        alignItems: 'center',
+        justifyContent: 'flex-start'
+    },
+    topmost: {
+        flex: 1,
+        height,
+        backgroundColor: color.black,
+    },
+    icon: {
+        backgroundColor: 'white', 
+        marginLeft: width/3,
+    },
+    scroll: {
+        //height: height* 0.6,
+        flex: 1
+    },
+    vertical: {
+        marginTop:height/25,
+        backgroundColor: color.ePayOrange,
+        height: 4,
     }
 }
