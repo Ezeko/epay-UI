@@ -20,7 +20,10 @@ export default class Home extends Component {
         this.state = {};
     }
 
-
+    closeDrawer () {
+        console.log('back button clicked')
+        this.drawer._root.close()
+    }
     render () {
         return(
         <Drawer
@@ -28,7 +31,7 @@ export default class Home extends Component {
                 this.drawer = ref;
                 }}
             
-            content={<Side navigation={this.props.navigation} />} 
+            content={<Side navigation={this.props.navigation} close = { ()=> this.closeDrawer() } />} 
             onClose={() => this.drawer._root.close()}
             >
             <View style = {style.wrapper}>
