@@ -31,6 +31,8 @@ export default {
         borderRadius: 20,
         textAlign: 'center',
         width: width/2.2,
+        borderColor: color.ePayOrange,
+        borderWidth: 2
     },
     about: {
         fontFamily: 'uber',
