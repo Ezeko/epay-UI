@@ -15,7 +15,7 @@ export default{
     },
     text: {
         flex: 1,
-        marginTop: height/5,
+        marginTop: height/3,
         alignItems: 'flex-start',
         justifyContent: 'center',
     },
@@ -35,7 +35,7 @@ export default{
         alignItems: 'flex-end',
         fontFamily: 'uber-b',
         marginLeft: width/1.5,
-        marginBottom: 20,
+        marginBottom: height/9,
         fontSize: width/17,
 
     }
