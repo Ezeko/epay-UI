@@ -20,7 +20,10 @@ export default class Home extends Component {
         this.state = {};
     }
 
-
+    closeDrawer () {
+        console.log('back button clicked')
+        this.drawer._root.close()
+    }
     render () {
         return(
         <Drawer
@@ -28,7 +31,7 @@ export default class Home extends Component {
                 this.drawer = ref;
                 }}
             
-            content={<Side navigation={this.props.navigation} />} 
+            content={<Side navigation={this.props.navigation} close = { ()=> this.closeDrawer() } />} 
             onClose={() => this.drawer._root.close()}
             >
             <View style = {style.wrapper}>
@@ -36,9 +39,13 @@ export default class Home extends Component {
                 <TouchableOpacity
                 onPress={() => this.drawer._root.open()}
                 >
-                    <Icon
-                    name = 'menu'
-                    />
+                    <View >
+                        <Icon
+                        style = {style.icon}
+                        name = 'menu'
+                        />
+                    </View>
+                   
                 </TouchableOpacity>
                 
 
@@ -54,7 +61,7 @@ export default class Home extends Component {
                             <Text style = {style.category}>Categories</Text>
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <Text style = {style.about}>About Epay</Text>
+                            <Text style = {style.about}>About ePay</Text>
                         </TouchableOpacity>
                     </View>
                     

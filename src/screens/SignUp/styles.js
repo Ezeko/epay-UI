@@ -6,7 +6,7 @@ let height = Dimensions.get("window").height;
 export default {
  container: {
     flex: 1,
-    backgroundColor: color.ePayOrange,
+    backgroundColor: color.white,
     fontFamily: 'uber'
  },
  wrapper: {
@@ -16,10 +16,13 @@ export default {
  },
  input: {
      flex: 1,
-     backgroundColor: color.white,
+     //backgroundColor: color.ePayOrange,
      borderRadius: 8,
      marginBottom: height/30,
      height: height/18,
+     borderColor: color.ePayOrange,
+     borderWidth: 2,
+     
      
  },
  foot: {
@@ -29,8 +32,9 @@ export default {
 
  },
  reg: {
-    backgroundColor: color.black,
+    backgroundColor: color.ePayOrange,
     color: color.whiteSmoke,
+    borderRadius: 12,
     height: height/22,
     width: '100%',
     fontSize: height/30,
@@ -49,8 +53,11 @@ export default {
  signInText2: {
     marginLeft: 10,
     textAlign: 'center',
-    color: 'white',
+    color: color.ePayOrange,
     fontSize: 18,
     fontFamily: 'uber'
+ },
+ regView: {
+    elevation: 4,
  }
 }
