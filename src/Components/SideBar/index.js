@@ -65,30 +65,32 @@ export default class Sidebar extends Component {
 
                         />
 
-                        <SideBar 
-                        text = ' Lifestyle & Travel'
-                        img = {require('../../../assets/logo/LifestyleAndTravel.png')}
-                        />
 
                         <SideBar 
                         text = 'Self Service'
                         img = {require('../../../assets/logo/SelfService.png')}
                         />
 
+
+                        <SideBar 
+                        text = ' Lifestyle & Travel'
+                        img = {require('../../../assets/logo/LifestyleAndTravel.png')}
+                        />
+
+                        <SideBar 
+                        text = ' Welfare'
+                        img = {require('../../../assets/logo/LifestyleAndTravel.png')}
+                        />
                         <SideBar 
                         text = 'Loans'
                         img = {require('../../../assets/logo/Loans.png')}
                         />
 
                         <SideBar 
-                        text = 'Notifications'
-                        img = {require('../../../assets/logo/Notifications.png')}
+                        text = 'Savings'
+                        img = {require('../../../assets/logo/Savings.png')}
                         />
 
-                        <SideBar 
-                        text = 'My profile'
-                        img = {require('../../../assets/logo/MyProfile.png')}
-                        />
 
                         <SideBar 
                         text = 'Bill Payment'
@@ -101,10 +103,7 @@ export default class Sidebar extends Component {
                         />
 
 
-                        <SideBar 
-                        text = 'Savings'
-                        img = {require('../../../assets/logo/Savings.png')}
-                        />
+
 
                         <SideBar 
                         text = ' Investment'
@@ -115,6 +114,26 @@ export default class Sidebar extends Component {
                         text = 'Cryptocurrency'
                         img = {require('../../../assets/logo/cryptocurrency.png')}
                         />
+
+                        <SideBar 
+                        text = 'Notifications'
+                        img = {require('../../../assets/logo/Notifications.png')}
+                        />
+
+                        <SideBar 
+                        text = 'My profile'
+                        img = {require('../../../assets/logo/MyProfile.png')}
+                        />
+
+                        { this.props.isAgent ?
+                            <SideBar 
+                            text = 'Notifications'
+                            img = {require('../../../assets/logo/Notifications.png')}
+                            />
+                            :
+                            '' 
+                        }
+
 
                         <SideBar 
                         text = ' Log out'
