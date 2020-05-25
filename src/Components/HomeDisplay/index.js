@@ -114,20 +114,21 @@ export default class Display extends Component {
                                 />
                                 :
                                 <SideBar 
-                                text = ' Log out'
+                                text = 'Log out'
                                 img = {require('../../../assets/logo/logOut.png')}
                                 /> 
                             }
                         </View>          
-                        <View style = {style.widget}>
+                        <View style = {style.logout}>
                             {
                                this.props.isAgent 
-                               ? <Text></Text>
-                               :
-                                <SideBar 
-                                text = ' Log out'
+                               ? 
+                               <SideBar 
+                                text = 'Log out'
                                 img = {require('../../../assets/logo/logOut.png')}
                                 />
+                               :
+                                ''
                             }
                         </View>
 

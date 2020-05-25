@@ -15,7 +15,7 @@ export default class SideBarContent extends Component {
     
     render() {
         return(
-            <View >
+            <View style = {style.sideBar}>
                 <TouchableOpacity onPress = {() => console.log('this.props.navigation.navigate(route)')} 
                 style = {style.container}
                 >
@@ -26,7 +26,7 @@ export default class SideBarContent extends Component {
                             name = {this.props.icon.name} //will take value from the parent component
                             />
                             :
-                            <Image source = {this.props.img} />
+                            <Image source = {this.props.img} style = {style.image} />
                         }
                     </View>
 

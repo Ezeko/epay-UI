@@ -6,5 +6,7 @@ let height = Dimensions.get("window").height;
 export default {
     container: {
         backgroundColor: color.white,
+        width,
+        height
     }
 }

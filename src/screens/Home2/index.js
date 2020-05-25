@@ -14,7 +14,7 @@ export default class Home2 extends Component {
 
     render () {
         return (
-            <View>
+            <View style = {style.container}>
                 <Side isAgent = {this.state.isAgent}/>
             </View>
         )
