@@ -33,5 +33,11 @@ export default {
         marginTop:height/25,
         backgroundColor: color.ePayOrange,
         height: 4,
+    },
+    widget: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 }

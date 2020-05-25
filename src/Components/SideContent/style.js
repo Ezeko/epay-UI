@@ -13,7 +13,7 @@ export default {
     },
     container: {
         flex:1,
-        flexDirection: 'row',
+        //flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'flex-end'
         

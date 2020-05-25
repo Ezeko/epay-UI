@@ -43,102 +43,121 @@ export default class Sidebar extends Component {
                         text = 'Home'
                         icon = {{name: 'home', type: 'simple-line-icon'}}
                         /> */}
+                        
+                        <View style = {style.widget}>
+                            <SideBar
+                            text = 'Home'
+                            img = {require('../../../assets/logo/HomeBarIcon14.png')}
+                            />
 
-                        <SideBar
-                        text = 'Home'
-                        img = {require('../../../assets/logo/HomeBarIcon14.png')}
-                        />
+                            <SideBar 
+                            text = 'Transfer Funds'
+                            img = {require('../../../assets/logo/transferfunds.png')}
+                            />
 
-                        <SideBar 
-                        text = 'Transfer Funds'
-                        img = {require('../../../assets/logo/transferfunds.png')}
-                        />
+                            <SideBar 
+                            text = 'Card Requests'
+                            img = {require('../../../assets/logo/CardRequest.png')}
+                            />
 
-                        <SideBar 
-                        text = 'Card Requests'
-                        img = {require('../../../assets/logo/CardRequest.png')}
-                        />
+                            <SideBar 
+                            text = 'Cards'
+                            img = {require('../../../assets/logo/Card.png')}
 
-                        <SideBar 
-                        text = 'Cards'
-                        img = {require('../../../assets/logo/Card.png')}
+                            />
+                        </View>
 
-                        />
-
-
-                        <SideBar 
-                        text = 'Self Service'
-                        img = {require('../../../assets/logo/SelfService.png')}
-                        />
-
-
-                        <SideBar 
-                        text = ' Lifestyle & Travel'
-                        img = {require('../../../assets/logo/LifestyleAndTravel.png')}
-                        />
-
-                        <SideBar 
-                        text = ' Welfare'
-                        img = {require('../../../assets/logo/LifestyleAndTravel.png')}
-                        />
-                        <SideBar 
-                        text = 'Loans'
-                        img = {require('../../../assets/logo/Loans.png')}
-                        />
-
-                        <SideBar 
-                        text = 'Savings'
-                        img = {require('../../../assets/logo/Savings.png')}
-                        />
+                        <View style = {style.widget} >
+                            <SideBar 
+                            text = 'Self Service'
+                            img = {require('../../../assets/logo/SelfService.png')}
+                            />
 
 
-                        <SideBar 
-                        text = 'Bill Payment'
-                        img = {require('../../../assets/logo/billspayment.png')}
-                        />
+                            <SideBar 
+                            text = ' Lifestyle & Travel'
+                            img = {require('../../../assets/logo/LifestyleAndTravel.png')}
+                            />
 
-                        <SideBar 
-                        text = 'Airtime'
-                        img = {require('../../../assets/logo/airtime.png')}
-                        />
+                            <SideBar 
+                            text = ' Welfare'
+                            img = {require('../../../assets/logo/SelfService.png')}
+                            />
+                            <SideBar 
+                            text = 'Loans'
+                            img = {require('../../../assets/logo/Loans.png')}
+                            />
+                        </View>
+                        
+                        <View style = {style.widget} >
+                            <SideBar 
+                            text = 'Savings'
+                            img = {require('../../../assets/logo/Savings.png')}
+                            />
+
+
+                            <SideBar 
+                            text = 'Bill Payment'
+                            img = {require('../../../assets/logo/billspayment.png')}
+                            />
+
+                            <SideBar 
+                            text = 'Airtime'
+                            img = {require('../../../assets/logo/airtime.png')}
+                            />
 
 
 
 
-                        <SideBar 
-                        text = ' Investment'
-                        img = {require('../../../assets/logo/investment.png')}
-                        />
-                
-                        <SideBar 
-                        text = 'Cryptocurrency'
-                        img = {require('../../../assets/logo/cryptocurrency.png')}
-                        />
+                            <SideBar 
+                            text = ' Investment'
+                            img = {require('../../../assets/logo/investment.png')}
+                            />
 
-                        <SideBar 
-                        text = 'Notifications'
-                        img = {require('../../../assets/logo/Notifications.png')}
-                        />
+                        </View>
 
-                        <SideBar 
-                        text = 'My profile'
-                        img = {require('../../../assets/logo/MyProfile.png')}
-                        />
+                        <View style = {style.widget} >
+                            <SideBar 
+                            text = 'Cryptocurrency'
+                            img = {require('../../../assets/logo/cryptocurrency.png')}
+                            />
 
-                        { this.props.isAgent ?
                             <SideBar 
                             text = 'Notifications'
                             img = {require('../../../assets/logo/Notifications.png')}
                             />
-                            :
-                            '' 
-                        }
+
+                            <SideBar 
+                            text = 'My profile'
+                            img = {require('../../../assets/logo/MyProfile.png')}
+                            />
+
+                            { this.props.isAgent ?
+                                <SideBar 
+                                text = 'Agents'
+                                img = {require('../../../assets/logo/SelfService.png')}
+                                />
+                                :
+                                <SideBar 
+                                text = ' Log out'
+                                img = {require('../../../assets/logo/logOut.png')}
+                                /> 
+                            }
+                        </View>          
+                        <View style = {style.widget}>
+                            {
+                               this.props.isAgent 
+                               ? '' 
+                               :
+                                <SideBar 
+                                text = ' Log out'
+                                img = {require('../../../assets/logo/logOut.png')}
+                                />
+                            }
+                        </View>
 
 
-                        <SideBar 
-                        text = ' Log out'
-                        img = {require('../../../assets/logo/logOut.png')}
-                        />
+
                     </ScrollView>
                 </View>
 
