@@ -5,15 +5,17 @@ let height = Dimensions.get("window").height;
 
 export default {
     text: {
-        color: color.ePayOrange,
+        color: color.whiteOff,
         fontFamily: 'uber',
         flex: 1,
         fontSize: 15,
+        alignItems: 'center',
+        justifyContent: 'flex-start'
 
     },
     container: {
         flex:1,
-        //flexDirection: 'column',
+        flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%'
@@ -28,11 +30,11 @@ export default {
     },
     textView: {
         flex: 1,
-       // flexDirection: 'row',
-        alignItems: 'center',
+        //flexDirection: 'row',
+        alignItems: 'flex-start',
         justifyContent: 'center',
         alignSelf: 'stretch',
-        marginLeft: 5,
+        left: 5,
     },
 
 

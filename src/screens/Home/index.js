@@ -31,7 +31,7 @@ export default class Home extends Component {
                 this.drawer = ref;
                 }}
             
-            content={<Side navigation={this.props.navigation} close = { ()=> this.closeDrawer() } />} 
+            content={<Side navigation={this.props.navigation} />}
             onClose={() => this.drawer._root.close()}
             >
             <View style = {style.wrapper}>

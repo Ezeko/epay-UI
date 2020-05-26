@@ -128,7 +128,7 @@ export default class Display extends Component {
                                 img = {require('../../../assets/logo/logOut.png')}
                                 />
                                :
-                                ''
+                                <Text></Text>
                             }
                         </View>
 

@@ -15,7 +15,8 @@ export default class SideBarContent extends Component {
     
     render() {
         return(
-            <View style = {style.sideBar}>
+            <View style = {style.sideBar}
+            >
                 <TouchableOpacity onPress = {() => console.log('this.props.navigation.navigate(route)')} 
                 style = {style.container}
                 >
