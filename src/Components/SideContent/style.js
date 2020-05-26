@@ -34,7 +34,10 @@ export default {
         alignSelf: 'stretch',
         marginLeft: 5,
     },
-    sideBar: {
+
+
+   /*
+   sideBar: {
         flex: 1,
         width: width/4,
         alignItems: 'center',
@@ -46,5 +49,6 @@ export default {
         height: height/8
         
     },
+    */
  
 }

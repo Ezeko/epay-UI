@@ -20,7 +20,7 @@ export default class SignIn extends Component {
 
 handleSubmission () {
     console.log('signed in')
-    this.props.navigation.navigate('HomeX');
+    this.props.navigation.navigate('Home');
 }
 
     render () {
