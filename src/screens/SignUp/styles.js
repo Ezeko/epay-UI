@@ -43,9 +43,10 @@ export default {
  },
  signIn: {
      flexDirection: 'row',
-     alignItems: 'space-between',
+     alignItems: 'center',
      justifyContents: 'center',
-     marginTop: 10
+     marginTop: 10,
+     left: 20,
  },
  signInText: {
     fontFamily: 'uber'
