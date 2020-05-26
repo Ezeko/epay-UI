@@ -10,7 +10,8 @@ export default {
         flex: 1,
         fontSize: 15,
         alignItems: 'center',
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        fontStyle: 'normal',
 
     },
     container: {
@@ -22,11 +23,11 @@ export default {
         
     },
     icon: {
+        width: width/15,
         marginLeft: width/30,
         marginRight: width/27,
         marginTop: 5,
-        alignItems: 'center',
-        justifyContent: 'flex-start',
+        //alignItems: 'center',
     },
     textView: {
         flex: 1,
@@ -34,7 +35,7 @@ export default {
         alignItems: 'flex-start',
         justifyContent: 'center',
         alignSelf: 'stretch',
-        left: 5,
+        marginTop: 5,
     },
 
 

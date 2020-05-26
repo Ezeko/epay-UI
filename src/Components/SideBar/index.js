@@ -144,7 +144,7 @@ export default class Sidebar extends Component {
                                 /> 
                             }
                         </View>          
-                        <View style = {style.logout}>
+                        <View style = {style.widget}>
                             {
                                this.props.isAgent 
                                ? 

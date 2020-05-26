@@ -17,9 +17,14 @@ import { Icon } from 'react-native-elements';
 export default class Home extends Component {
     constructor(){
         super();
-        this.state = {};
+        this.state = {
+            loaded: false,
+            isAgent: true,
+        };
     }
-
+    componentDidMount () {
+        this.setState({loaded: true})
+    }
     closeDrawer () {
         console.log('back button clicked')
         this.drawer._root.close()
@@ -31,7 +36,7 @@ export default class Home extends Component {
                 this.drawer = ref;
                 }}
             
-            content={<Side navigation={this.props.navigation} />}
+            content={<Side navigation={this.props.navigation} isAgent = {this.state.isAgent} />}
             onClose={() => this.drawer._root.close()}
             >
             <View style = {style.wrapper}>
@@ -40,10 +45,13 @@ export default class Home extends Component {
                 onPress={() => this.drawer._root.open()}
                 >
                     <View >
+                       {this.state.loaded?
                         <Icon
                         style = {style.icon}
                         name = 'menu'
-                        />
+                        /> :
+                        <Text></Text>
+                    }
                     </View>
                    
                 </TouchableOpacity>
