@@ -16,12 +16,16 @@ export default class Sidebar extends Component {
             <View style = {style.topmost}>
                 <View style = {style.head}>
                     <Image source = {require('../../../assets/images/ePayLogo.png')} />
+                    {
+                    /*
                     <TouchableOpacity onPress = {() => this.props.close}>
                         <Icon
                         style = {style.icon}
                         type = 'simple-line-icon'
                         name='arrow-left'/>
                     </TouchableOpacity>
+                    */
+                    }
 
 
                 </View>
