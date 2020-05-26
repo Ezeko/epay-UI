@@ -22,7 +22,8 @@ export default {
      height: height/18,
      borderColor: color.ePayOrange,
      borderWidth: 2,
-     
+     fontFamily: 'uber',
+     fontStyle: 'normal',
      
  },
  foot: {

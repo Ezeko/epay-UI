@@ -20,11 +20,14 @@ export default {
      marginBottom: height/30,
      height: height/18,
      marginTop: 15,
-     borderWidth: 2
+     borderWidth: 2,
+     fontStyle: 'normal',
+     fontFamily: 'uber'
  },
   text: {
     fontFamily: 'uber',
     fontSize: 25,
-    color: color.ePayOrange
+    color: color.ePayOrange,
+    fontStyle: 'normal'
  }
 }

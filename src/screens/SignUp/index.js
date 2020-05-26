@@ -118,7 +118,7 @@ export default class SignUp extends Component {
             onSubmitEditing = {() => this.props.navigation.navigate('OTP')}
             ref = {(input) => this.password = input}
             onChangeText = {(password) => this.setState({password})}
-            style = {{fontFamily: 'uber'}}
+            style = {{fontFamily: 'uber', fontStyle: 'normal',}}
           />
         </View>
 
