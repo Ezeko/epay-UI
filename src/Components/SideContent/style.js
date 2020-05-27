@@ -6,7 +6,7 @@ let height = Dimensions.get("window").height;
 export default {
     text: {
         color: color.whiteOff,
-        fontFamily: 'avertalight',
+        fontFamily: 'uber-l',
         flex: 1,
         fontSize: 15,
         alignItems: 'center',
