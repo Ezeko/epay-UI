@@ -36,8 +36,9 @@ export default {
     },
     widget: {
         flex: 1,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        //flexDirection: 'row',
+        //alignItems: 'flex-end',
+        justifyContent: 'flex-start',
+        marginBottom: height/16,
     }
 }

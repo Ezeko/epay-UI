@@ -13,10 +13,11 @@ export default {
         width,
     },
     welcome: {
-        fontFamily: 'uber',
+        fontFamily: 'avertalight',
         fontSize: 22,
         top: 20,
-        left: 12
+        left: 12,
+        fontStyle: 'normal'
     },
     foot: {
         flex: 1,
@@ -25,26 +26,31 @@ export default {
         width
     },
     category: {
-        fontFamily: 'uber-b',
+        fontFamily: 'uber-l',
         fontSize: 26,
         backgroundColor: color.white,
         borderRadius: 20,
         textAlign: 'center',
         width: width/2.2,
         borderColor: color.ePayOrange,
-        borderWidth: 2
+        borderWidth: 2,
+        fontStyle: 'normal',
+        elevation: 2,
     },
     about: {
-        fontFamily: 'uber',
+        fontFamily: 'uber-l',
         marginHorizontal: 20,
-        fontFamily: 'uber-b',
         fontSize: 26,
         backgroundColor: color.ePayOrange,
         //border: 2,
         //border: '#f58635',
         borderRadius: 20,
         textAlign: 'center',
-        width: width/2,
+        width: width/2.2,
+        fontStyle: 'normal',
+        elevation: 2,
+        borderColor: color.ePayOrange,
+        borderWidth: 2
     },
     icon: {
         marginRight: width/1.1,

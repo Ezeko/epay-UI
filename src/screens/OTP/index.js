@@ -25,7 +25,7 @@ export default class OTP extends Component {
         <View style = {style.wrapper} >
 
           <Text style = {style.text}>Welcome David, </Text>
-          <Text style = {{fontFamily: 'uber-b'}}>Kindly enter your 8 digits pin from your email...</Text>
+          <Text style = {{fontFamily: 'avertalight',fontStyle: 'normal',}}>Kindly enter your 8 digits pin from your email...</Text>
 
           <KeyboardAwareScrollView>
             <TextInput

@@ -20,7 +20,7 @@ export default class SignIn extends Component {
 
 handleSubmission () {
     console.log('signed in')
-    this.props.navigation.navigate('HomeX');
+    this.props.navigation.navigate('Home');
 }
 
     render () {
@@ -38,7 +38,7 @@ handleSubmission () {
                           autoCompleteType = 'email'
                           onSubmitEditing = {()=> this.password.focus()}
                           onChangeText = {(email) => this.setState({email})}
-                          style = {{fontFamily: 'uber'}}
+                          style = {{fontFamily: 'avertalight'}}
                         />
                     </View>
 
@@ -53,7 +53,7 @@ handleSubmission () {
                           onChangeText = {(password) => this.setState({password})}
                           secureTextEntry = {true}
                           ref = {(input) => this.password = input}
-                          style = {{fontFamily: 'uber'}}
+                          style = {{fontFamily: 'avertalight'}}
                         />
                     </View>
                     <TouchableOpacity 
@@ -63,11 +63,11 @@ handleSubmission () {
                         <Text style = {style.text}>Submit</Text>
                     </TouchableOpacity>
                     <View style = {style.signIn}>
-                      <Text style = {{fontFamily: 'uber', fontSize: 13, marginTop: 25}}>No Account Yet? Register</Text>
+                      <Text style = {{fontFamily: 'uber-l', fontSize: 13, marginTop: 25}}>No Account Yet? Register</Text>
                       <TouchableOpacity 
                       onPress = {()=> this.props.navigation.navigate('SignUp')}
                       >
-                        <Text style = {{fontFamily: 'uber', fontSize: 16, textAlign: 'center',
+                        <Text style = {{fontFamily: 'uber-l', fontSize: 16, textAlign: 'center',
                         color:'coral'}}> Here</Text>
                       </TouchableOpacity>
                     </View>
