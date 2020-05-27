@@ -13,8 +13,8 @@ export default {
         width,
     },
     welcome: {
-        fontFamily: 'uber',
-        //fontSize: 22,
+        fontFamily: 'avertalight',
+        fontSize: 22,
         top: 20,
         left: 12,
         fontStyle: 'normal'
@@ -26,7 +26,7 @@ export default {
         width
     },
     category: {
-        fontFamily: 'uber',
+        fontFamily: 'uber-l',
         fontSize: 26,
         backgroundColor: color.white,
         borderRadius: 20,
@@ -38,7 +38,7 @@ export default {
         elevation: 2,
     },
     about: {
-        fontFamily: 'uber',
+        fontFamily: 'uber-l',
         marginHorizontal: 20,
         fontSize: 26,
         backgroundColor: color.ePayOrange,

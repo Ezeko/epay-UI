@@ -22,7 +22,7 @@ export default {
      height: height/18,
      borderColor: color.ePayOrange,
      borderWidth: 2,
-     fontFamily: 'uber',
+     fontFamily: 'uber-l',
      fontStyle: 'normal',
      
  },
@@ -40,7 +40,7 @@ export default {
     width: '100%',
     fontSize: height/30,
     textAlign: 'center',
-    fontFamily: 'uber'
+    fontFamily: 'uber-l'
  },
  signIn: {
      flexDirection: 'row',
@@ -50,14 +50,14 @@ export default {
      left: 20,
  },
  signInText: {
-    fontFamily: 'uber'
+    fontFamily: 'uber-l'
  },
  signInText2: {
     marginLeft: 10,
     textAlign: 'center',
     color: color.ePayOrange,
     fontSize: 18,
-    fontFamily: 'uber'
+    fontFamily: 'uber-l'
  },
  regView: {
     elevation: 4,

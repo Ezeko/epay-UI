@@ -20,13 +20,13 @@ export default{
         justifyContent: 'center',
     },
     firstText: {
-        fontFamily: 'uber',
+        fontFamily: 'uber-b',
         fontSize: width/6,
         color: color.whiteOff,
         fontStyle: 'normal',
     },
     secondText: {
-        fontFamily: 'uber',
+        fontFamily: 'avertalight',
         fontWeight: '500',
         color: color.whiteOff,
         fontSize: width/15,

@@ -24,7 +24,7 @@ export default {
  top: {
      marginBottom: height/20,
      textAlign: 'center',
-     fontFamily: 'uber',
+     fontFamily: 'uber-l',
      borderRadius: 12
 
  },
@@ -41,7 +41,7 @@ export default {
      justifyContents: 'center',
  },
  text: {
-    fontFamily: 'uber',
+    fontFamily: 'uber-l',
     fontSize: 25,
     textAlign: 'center',
     color: color.white

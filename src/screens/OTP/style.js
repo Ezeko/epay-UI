@@ -25,7 +25,7 @@ export default {
      fontFamily: 'uber'
  },
   text: {
-    fontFamily: 'uber',
+    fontFamily: 'uber-l',
     fontSize: 25,
     color: color.ePayOrange,
     fontStyle: 'normal'
