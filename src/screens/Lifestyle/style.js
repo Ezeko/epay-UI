@@ -7,4 +7,9 @@ export default {
    wrapper: {
       flex: 1,
     },
+    head: {},
+    iconHead: {},
+    image: {},
+    icon: {},
+    main: {},
 }
