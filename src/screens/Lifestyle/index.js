@@ -4,6 +4,7 @@ import Spinner from 'react-native-loading-spinner-overlay';
 import style from './style'
 import { Icon } from 'native-base';
 import color from '../../Config/color';
+import ScrollContent from '../../Components/ScrollContent'
 
 
 export default class Lifestyle extends Component {
@@ -39,7 +40,18 @@ export default class Lifestyle extends Component {
                 </View>
 
                 <View style= {style.main}>
-                    
+                    <View>
+                        <View>
+                            <Image source = {require('../../../assets/logo/lifestyle.png')} />
+                            <Text style = {style.text}>Lifestyle</Text>
+                        </View>
+                        <Text>Lorem ipsum dolor sit amet, consectetu Lorem ipsum dolor sit amet,.</Text>
+                    </View>
+                    <View>
+                        <ScrollView>
+                            <ScrollContent />
+                        </ScrollView>
+                    </View>
                 </View>
             </View>
         )

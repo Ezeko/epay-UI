@@ -12,4 +12,5 @@ export default {
     image: {},
     icon: {},
     main: {},
+    text: {},
 }
