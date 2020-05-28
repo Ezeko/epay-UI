@@ -6,8 +6,9 @@ import SignUp from "../screens/SignUp/index";
 import OTP from "../screens/OTP/index";
 import SignIn from "../screens/SignIn/index"
 import Home from "../screens/Home";
-import HomeX from "../screens/Home2/index"
-import Video from "../screens/Welcome"
+import HomeX from "../screens/Home2/index";
+import Video from "../screens/Welcome";
+import Lifestyle from "../screens/Lifestyle";
 
 const AppNavigator = createStackNavigator(
     {
@@ -45,6 +46,12 @@ const AppNavigator = createStackNavigator(
           screen: HomeX,
           navigationOptions: {
             headerShown: false
+          }
+        },
+        Lifestyle:{
+          screen: Lifestyle,
+          navigationOptions: {
+            headerShown: true
           }
         },
         Video: {
