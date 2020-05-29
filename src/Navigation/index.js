@@ -9,6 +9,7 @@ import Home from "../screens/Home";
 import HomeX from "../screens/Home2/index";
 import Video from "../screens/Welcome";
 import Lifestyle from "../screens/Lifestyle";
+import Card from "../screens/Card";
 
 const AppNavigator = createStackNavigator(
     {
@@ -48,17 +49,33 @@ const AppNavigator = createStackNavigator(
             headerShown: false
           }
         },
-        Lifestyle:{
-          screen: Lifestyle,
-          navigationOptions: {
-            headerShown: true
-          }
-        },
         Video: {
           screen: Video,
           navigationOptions: {
             headerShown: false
           }
+        },
+        Lifestyle:{
+          screen: Lifestyle,
+          navigationOptions: {
+            headerShown: true,
+            headerTitleStyle: {
+              fontFamily: 'uber',
+            },
+            headerTitleAlign: 'center'
+          },
+        },
+        Card:{
+          screen: Card,
+          navigationOptions: {
+            headerShown: true,
+            headerTitleStyle: {
+              fontFamily: 'uber',
+              alignItems: 'center'
+            },
+            headerTitleAlign: 'center'
+          },
+         
         },
     },
     
