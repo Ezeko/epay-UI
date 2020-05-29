@@ -185,7 +185,9 @@ export default class SignUp extends Component {
 
     else{
     this.setState({isLoading: false})
-    this.props.navigation.navigate('OTP', firstname)
+    this.props.navigation.navigate('OTP', {
+      firstname: firstname,
+    })
     }
     
   }
