@@ -57,8 +57,14 @@ const AppNavigator = createStackNavigator(
         Lifestyle:{
           screen: Lifestyle,
           navigationOptions: {
-            headerShown: true
-          }
+            headerShown: true,
+            headerTitleStyle: {
+              fontFamily: 'uber',
+              alignItems: 'center'
+            },
+            headerTitleAlign: 'center'
+          },
+         
         },
     },
     

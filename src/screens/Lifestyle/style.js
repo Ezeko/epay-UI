@@ -42,9 +42,8 @@ export default {
         alignItems: 'center',
         justifyContents: 'center',
         borderRadius: 12,
-        borderWidth: 1.5,
+        borderWidth: 1,
         borderColor: color.gray,
-        elevation: 2,
     },
     lifestyle: {
         //flex: 1,
