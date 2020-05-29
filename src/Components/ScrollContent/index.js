@@ -11,12 +11,13 @@ export default class Content extends Component {
 
     render (){
         return(
-            <View>
+            <View style = {style.content}>
                 <ImageBackground source = {this.props.image} style = {style.image} >
-                    <Text>{this.props.firstText}</Text>
-                    <Text>{this.props.secondText}</Text>
-                    <Text>{this.props.thirdText}</Text>
-                    <Text>{this.props.fourthText}</Text>
+                    <Text style = {style.firstText}>{this.props.firstText}</Text>
+                    <Text style = {style.secondText}>{this.props.secondText}</Text>
+                    <Text style = {style.thirdText}>{this.props.thirdText}</Text>
+                    <Text style = {style.fourthText}>{this.props.fourthText}</Text>
+                    <Text style = {style.fifthText}>{this.props.fifthText}</Text>
                 </ImageBackground>
             </View>
         )

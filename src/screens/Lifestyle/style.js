@@ -58,6 +58,6 @@ export default {
         width: width * 0.4,
     },
     secondMainPart: {
-        width: width * 0.5,
+        width: width * 0.55,
     },
 }
