@@ -68,7 +68,6 @@ export default class Sidebar extends Component {
                                 <SideBar 
                                 text = 'Cards'
                                 img = {require('../../../assets/logo/Card.png')}
-
                                 />
                             </TouchableOpacity>
                         </View>
