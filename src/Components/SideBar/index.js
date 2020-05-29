@@ -64,11 +64,13 @@ export default class Sidebar extends Component {
                             img = {require('../../../assets/logo/CardRequest.png')}
                             />
 
-                            <SideBar 
-                            text = 'Cards'
-                            img = {require('../../../assets/logo/Card.png')}
+                            <TouchableOpacity onPress = {() => this.props.navigation.navigate('Card')} >
+                                <SideBar 
+                                text = 'Cards'
+                                img = {require('../../../assets/logo/Card.png')}
 
-                            />
+                                />
+                            </TouchableOpacity>
                         </View>
 
                         <View style = {style.widget} >
