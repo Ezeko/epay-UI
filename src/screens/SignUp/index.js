@@ -283,6 +283,7 @@ export default class SignUp extends Component {
           />
         </View>
 
+
         <View style = {style.input} >
           <TextInput
             keyboardType = 'default'
