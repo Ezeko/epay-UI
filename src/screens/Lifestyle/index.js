@@ -23,7 +23,7 @@ export default class Lifestyle extends Component {
 
     render() {
         return (
-            <View style = {{flex: 1}}>
+            <View style = {style.wrapper}>
                 <StatusBar barStyle = 'dark-content' />
                 <Spinner
                 visible = {this.state.loading}
@@ -37,14 +37,15 @@ export default class Lifestyle extends Component {
                         color = '#ff7f50'
                         />
                         <View style = {style.inputIcon}>
-                            <Icon name='search' />
+                            <Icon name='search' 
+                            style = {{marginHorizontal: 7}}/>
                             <TextInput
                             placeholder='SEARCH'
                             keyboardType = 'default'
                             returnKeyType = 'send'
                             onSubmitEditing = {()=> this.handleSubmission()}
                             onChangeText = {(search) => this.setState({search})}
-                            style = {{fontFamily: 'avertalight'}}
+                            style = {{fontFamily: 'avertalight', flex: 1}}
 
                             />
                         </View>
@@ -57,14 +58,14 @@ export default class Lifestyle extends Component {
                 </View>
 
                 <View style= {style.main}>
-                    <View>
-                        <View>
+                    <View style = {style.firstMainPart}>
+                        <View style = {style.lifestyle}>
                             <Image source = {require('../../../assets/logo/LifestyleAndTravel.png')} />
                             <Text style = {style.text}>Lifestyle</Text>
                         </View>
-                        <Text>Lorem ipsum dolor sit amet, consectetu Lorem ipsum dolor sit amet,.</Text>
+                        <Text style = {{fontFamily: 'avertalight', marginHorizontal: 15}}>Lorem ipsum dolor sit amet, consectetu Lorem ipsum dolor sit amet,.</Text>
                     </View>
-                    <View style = {{flex: 1}}>
+                    <View style = {style.secondMainPart} >
                         <ScrollView style = {{flex: 1}}>
                             <ScrollContent
                             image = {require('../../../assets/images/educationFrame.png')}
