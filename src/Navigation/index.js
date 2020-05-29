@@ -48,16 +48,16 @@ const AppNavigator = createStackNavigator(
             headerShown: false
           }
         },
-        Lifestyle:{
-          screen: Lifestyle,
-          navigationOptions: {
-            headerShown: true
-          }
-        },
         Video: {
           screen: Video,
           navigationOptions: {
             headerShown: false
+          }
+        },
+        Lifestyle:{
+          screen: Lifestyle,
+          navigationOptions: {
+            headerShown: true
           }
         },
     },

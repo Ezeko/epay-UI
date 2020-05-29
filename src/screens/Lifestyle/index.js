@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Text, View, ScrollView, StatusBar} from 'react-native';
+import {Text, View, ScrollView, StatusBar, Image, TextInput} from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
 import style from './style'
 import { Icon } from 'native-base';
@@ -12,13 +12,18 @@ export default class Lifestyle extends Component {
         super (props);
         this.state = {
             loading: true,
+            search: '',
         }
     }
 
 
+    componentDidMount () {
+        this.setState({loading: false})
+    }
+
     render() {
         return (
-            <View>
+            <View style = {{flex: 1}}>
                 <StatusBar barStyle = 'dark-content' />
                 <Spinner
                 visible = {this.state.loading}
@@ -28,12 +33,24 @@ export default class Lifestyle extends Component {
 
                 <View style = {style.head} >
                     <View style = {style.iconHead}>
-                        <Icon name = 'menu'  style = {style.icon}
-                        color = {color.ePayOrange}
+                        <Icon name = 'menu'
+                        color = '#ff7f50'
                         />
+                        <View style = {style.inputIcon}>
+                            <Icon name='search' />
+                            <TextInput
+                            placeholder='SEARCH'
+                            keyboardType = 'default'
+                            returnKeyType = 'send'
+                            onSubmitEditing = {()=> this.handleSubmission()}
+                            onChangeText = {(search) => this.setState({search})}
+                            style = {{fontFamily: 'avertalight'}}
+
+                            />
+                        </View>
                     </View>
                     <View>
-                        <Image source = {require('../../../assets/images/homeImage.png')}
+                        <Image source = {require('../../../assets/images/ePayLogo.png')}
                         style = {style.image}
                         />
                     </View>
@@ -42,7 +59,7 @@ export default class Lifestyle extends Component {
                 <View style= {style.main}>
                     <View>
                         <View>
-                            <Image source = {require('../../../assets/logo/lifestyle.png')} />
+                            <Image source = {require('../../../assets/logo/LifestyleAndTravel.png')} />
                             <Text style = {style.text}>Lifestyle</Text>
                         </View>
                         <Text>Lorem ipsum dolor sit amet, consectetu Lorem ipsum dolor sit amet,.</Text>
