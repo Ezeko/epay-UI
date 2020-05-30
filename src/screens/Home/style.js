@@ -51,7 +51,7 @@ export default {
         width: width/2.2,
         fontStyle: 'normal',
         elevation: 2,
-        borderColor: color.white,
+        borderColor: color.ePayOrange,
         borderWidth: 2
     },
     icon: {
