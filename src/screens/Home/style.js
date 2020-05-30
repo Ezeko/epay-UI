@@ -27,20 +27,22 @@ export default {
     },
     category: {
         fontFamily: 'uber-l',
-        fontSize: 26,
+        //fontSize: 26,
         backgroundColor: color.white,
         borderRadius: 20,
         textAlign: 'center',
         width: width/2.2,
         borderColor: color.ePayOrange,
         borderWidth: 2,
+        height: height/15,
         fontStyle: 'normal',
         elevation: 2,
     },
     about: {
         fontFamily: 'uber-l',
+        height: height/15,
         marginHorizontal: 20,
-        fontSize: 26,
+        //fontSize: 26,
         backgroundColor: color.ePayOrange,
         //border: 2,
         //border: '#f58635',
@@ -49,7 +51,7 @@ export default {
         width: width/2.2,
         fontStyle: 'normal',
         elevation: 2,
-        borderColor: color.ePayOrange,
+        borderColor: color.white,
         borderWidth: 2
     },
     icon: {
