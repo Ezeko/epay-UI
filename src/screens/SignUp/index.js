@@ -260,8 +260,24 @@ export default class SignUp extends Component {
             blurOnSubmit = {true}
             textAlign = 'center'
             maxLength = {11}
-            onSubmitEditing = {() => this.address.focus()}
+            onSubmitEditing = {() => this.agentCode.focus()}
             ref = {(input) => this.telephone = input}
+            onChangeText = {(phone) => this.setState({phone})}
+            style = {{fontFamily: 'avertalight'}}
+          />
+        </View>
+
+        <View style = {style.input}>
+          <TextInput
+            keyboardType = 'number-pad'
+            returnKeyType = 'next'
+            textContentType = 'oneTimeCode'
+            placeholder = 'Agent Code'
+            blurOnSubmit = {true}
+            textAlign = 'center'
+            maxLength = {10}
+            onSubmitEditing = {() => this.address.focus()}
+            ref = {(input) => this.agentCode = input}
             onChangeText = {(phone) => this.setState({phone})}
             style = {{fontFamily: 'avertalight'}}
           />
