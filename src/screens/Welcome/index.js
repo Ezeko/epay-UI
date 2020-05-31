@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {View} from 'react-native';
-import Video from 'react-native-video';
+import { Video } from 'expo';
 import style from './style';
 
 export default class Welcome extends Component {

@@ -341,5 +341,5 @@ export default class SignUp extends Component {
 
     </View>
     )
-  }
+  } 
 }
