@@ -4,12 +4,14 @@ import {
   View,
   Text,
   StatusBar,
-  Alert
+  Alert,
+  Picker,
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import style from './styles';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Spinner from 'react-native-loading-spinner-overlay';
+import { Item } from 'native-base'
 
 
 export default class SignUp extends Component {
@@ -23,6 +25,7 @@ export default class SignUp extends Component {
       address: '',
       password: '',
       isLoading: false,
+      isAgent: false
     };
   }
 
@@ -267,6 +270,22 @@ export default class SignUp extends Component {
           />
         </View>
 
+        <View >
+          <Picker
+          iosHeader="Select one"
+          mode="dropdown"
+          selectedValue={(value) => console.log(value)}
+          itemStyle = {{fontFamily: 'avertalight'}}
+          onValueChange={(value) => value === 'agent' ? this.setState({isAgent: true}) : console.log('not an agent')}
+          >
+            <Item label="Select Type of User" value="none" style = {{fontFamily: 'avertalight'}} ></Item>
+            <Item label="Normal User" value="user" style = {{fontFamily: 'avertalight'}} />
+            <Item label="Agent" value="agent" style = {{fontFamily: 'avertalight'}} />
+          </Picker>
+        </View>
+
+      {
+        this.state.isAgent ?
         <View style = {style.input}>
           <TextInput
             keyboardType = 'number-pad'
@@ -282,6 +301,8 @@ export default class SignUp extends Component {
             style = {{fontFamily: 'avertalight'}}
           />
         </View>
+        : <Text></Text>
+        }
 
         <View style = {style.input}>
           <TextInput
