@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import {View} from 'react-native';
-import { Video } from 'expo';
+import {View, Text} from 'react-native';
+import * as Video  from 'expo-av';
 import style from './style';
 
 export default class Welcome extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            uri : require('../../../assets/EPayLogointro.mp4')
+            uri : require('../../../assets/video/EPayLogointro.mp4')
         }
     }
 
@@ -16,7 +16,9 @@ export default class Welcome extends Component {
         console.log('uri' + this.state.uri)
         return (
             <View>
-                <Video source = {{uri: "../../../assets/EPayLogointro.mp4"}}
+                <Text>Thidi</Text>
+                {console.log('video')}
+                <Video source = {{uri: require('../../../assets/video/EPayLogointro.mp4')}}
                 onError = {(error) => console.log(error)}
                 style = {style.video}
                 resizeMode  = 'cover'
