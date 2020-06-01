@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View, Text} from 'react-native';
+import {View, AsyncStorage} from 'react-native';
 import { Video }  from 'expo-av';
 import style from './style';
 
@@ -12,12 +12,27 @@ export default class Index extends Component {
         }
     }
 
-    endAction (){
+    componentDidMount () {
         //check AsyncStorage if user has been used the app before
 
-        //if its first timer navigate to slider screen
-        isFirstTimer ? this.props.navigation.navigate('Slider'):
-        this.props.navigation.navigate('SignIn') //else navigate to signin screen
+        AsyncStorage.getItem('isFirstTimer').then((isFirstTimer)=> isFirstTimer ? this.setState({isFirstTimer}): this.setState({isFirstTimer: true}))
+        .catch((error) => {
+        console.log('AsyncStorage Video error: ' + error);
+        })
+    }
+
+    endAction (){
+        let carryOutTask = () => {
+            //if its first timer navigate to slider screen
+            this.state.isFirstTimer ? 
+            this.props.navigation.navigate('Slider')
+            :
+            this.props.navigation.navigate('SignIn'); //else navigate to signin screen
+
+        }
+
+        setTimeout( carryOutTask, 5000);
+
     }
 
     _handleVideoRef = component => {
@@ -36,7 +51,7 @@ export default class Index extends Component {
                 shouldPlay
                 resizeMode  = 'stretch'
                 ref = {() => this._handleVideoRef}
-                onEnd = { console.log('finished playing')}
+                onEnd = { this.endAction()}
                 
                 />
             </View>
