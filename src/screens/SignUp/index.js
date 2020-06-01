@@ -4,12 +4,15 @@ import {
   View,
   Text,
   StatusBar,
-  Alert
+  Alert,
+  Picker,
+  AsyncStorage,
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import style from './styles';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Spinner from 'react-native-loading-spinner-overlay';
+import { Item } from 'native-base'
 
 
 export default class SignUp extends Component {
@@ -23,10 +26,20 @@ export default class SignUp extends Component {
       address: '',
       password: '',
       isLoading: false,
+      isAgent: false,
+      isFirstTimer: false,
     };
   }
 
-  componentDidMount () {}
+
+  componentDidMount (){
+    //get state of app user
+    AsyncStorage.getItem('isFirstTimer')
+    .then((isFirstTimer)=> isFirstTimer ? this.setState({isFirstTimer}) : console.log('Not a firsttimer') )
+    .catch((error)=> console.log(error))
+
+}
+
 
   registerUser () {
 
@@ -184,10 +197,17 @@ export default class SignUp extends Component {
 
 
     else{
-    this.setState({isLoading: false})
-    this.props.navigation.navigate('OTP', {
-      firstname: firstname,
-    })
+      this.state.isFirstTimer ? 
+            AsyncStorage.setItem('isFirstTimer', false)
+            .then(()=> console.log('Set false'))
+            .catch((err)=>console.log(err))
+            : 
+            console.log('Not a first user');
+
+      this.setState({isLoading: false})
+      this.props.navigation.navigate('OTP', {
+        firstname: firstname,
+      })
     }
     
   }
@@ -260,12 +280,46 @@ export default class SignUp extends Component {
             blurOnSubmit = {true}
             textAlign = 'center'
             maxLength = {11}
-            onSubmitEditing = {() => this.address.focus()}
+            onSubmitEditing = {() => this.agentCode.focus()}
             ref = {(input) => this.telephone = input}
             onChangeText = {(phone) => this.setState({phone})}
             style = {{fontFamily: 'avertalight'}}
           />
         </View>
+
+        <View >
+          <Picker
+          iosHeader="Select one"
+          mode="dropdown"
+          selectedValue={(value) => console.log(value)}
+          itemStyle = {{fontFamily: 'avertalight'}}
+          onValueChange={(value) => value === 'agent' ? this.setState({isAgent: true}) : console.log('not an agent')}
+          >
+            <Item label="Select Type of User" value="none" style = {{fontFamily: 'avertalight'}} ></Item>
+            <Item label="Normal User" value="user" style = {{fontFamily: 'avertalight'}} />
+            <Item label="Agent" value="agent" style = {{fontFamily: 'avertalight'}} />
+          </Picker>
+        </View>
+
+      {
+        this.state.isAgent ?
+        <View style = {style.input}>
+          <TextInput
+            keyboardType = 'number-pad'
+            returnKeyType = 'next'
+            textContentType = 'oneTimeCode'
+            placeholder = 'Agent Code'
+            blurOnSubmit = {true}
+            textAlign = 'center'
+            maxLength = {10}
+            onSubmitEditing = {() => this.address.focus()}
+            ref = {(input) => this.agentCode = input}
+            onChangeText = {(phone) => this.setState({phone})}
+            style = {{fontFamily: 'avertalight'}}
+          />
+        </View>
+        : <Text></Text>
+        }
 
         <View style = {style.input}>
           <TextInput
@@ -282,6 +336,7 @@ export default class SignUp extends Component {
             style = {{fontFamily: 'avertalight'}}
           />
         </View>
+
 
         <View style = {style.input} >
           <TextInput
@@ -324,5 +379,5 @@ export default class SignUp extends Component {
 
     </View>
     )
-  }
+  } 
 }

@@ -5,7 +5,8 @@ import {
     View,
     TouchableOpacity,
     StatusBar,
-    Alert
+    Alert,
+    AsyncStorage
 } from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import style from './style';
@@ -18,76 +19,94 @@ export default class SignIn extends Component {
             email: '',
             password: '',
             isLoading: false,
+            isFirstTimer: false,
         }
     }
 
-handleSubmission () {
-
-    //show spinner
-    this.setState({isLoading: true})
-
-    //strip input of encoded characters
-    let email = this.state.email.replace(/^\s+|\s+$/g, "");
-    let password = this.state.password.replace(/^\s+|\s+$/g, "");
-    
-    //regex to check that email contains '@' and . and two to fine characters after .
-
-    let checkEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(email);
-
-
-    if (email.length < 1){
-        this.setState({isLoading: false}); //quit loading
-        Alert.alert(
-            'Oops!',
-            'Email cannot be empty',
-            [
-                {
-                  text: 'OK',
-                  style: 'cancel'
-                }
-              ],
-              {
-                cancelable: true
-              }
-         );
+    componentDidMount (){
+        //get state of app user
+        AsyncStorage.getItem('isFirstTimer')
+        .then((isFirstTimer)=> isFirstTimer ? this.setState({isFirstTimer}) 
+        : console.log('Not a firsttimer') )
+        .catch((error) => console.log(error))
     }
 
-    else if (!checkEmail){
-        this.setState({isLoading: false}); //quit loading
-        Alert.alert(
-            'Oops!',
-            'Email format not valid',
-            [
-                {
-                  text: 'OK',
-                  style: 'cancel'
-                }
-              ],
-              {
-                cancelable: true
-              }
-         )
-    }
 
-    else if (password.length < 1) {
-        this.setState({isLoading: false}); //quit loading
-        Alert.alert(
-            'Oops!',
-            'Password cannot be empty',
-            [
-                {
+    handleSubmission () {
+
+        //show spinner
+        this.setState({isLoading: true})
+
+        //strip input of encoded characters
+        let email = this.state.email.replace(/^\s+|\s+$/g, "");
+        let password = this.state.password.replace(/^\s+|\s+$/g, "");
+        
+        //regex to check that email contains '@' and . and two to fine characters after .
+
+        let checkEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(email);
+
+
+        if (email.length < 1){
+            this.setState({isLoading: false}); //quit loading
+            Alert.alert(
+                'Oops!',
+                'Email cannot be empty',
+                [
+                    {
                     text: 'OK',
                     style: 'cancel'
+                    }
+                ],
+                {
+                    cancelable: true
                 }
-            ]
-        )
-    }
-    else {
-        console.log('signed in');
-        this.setState({isLoading: false}); //quit loading 
-        this.props.navigation.navigate('Home'); //navigate to home screen
-    }
-    
+            );
+        }
+
+        else if (!checkEmail){
+            this.setState({isLoading: false}); //quit loading
+            Alert.alert(
+                'Oops!',
+                'Email format not valid',
+                [
+                    {
+                    text: 'OK',
+                    style: 'cancel'
+                    }
+                ],
+                {
+                    cancelable: true
+                }
+            )
+        }
+
+        else if (password.length < 1) {
+            this.setState({isLoading: false}); //quit loading
+            Alert.alert(
+                'Oops!',
+                'Password cannot be empty',
+                [
+                    {
+                        text: 'OK',
+                        style: 'cancel'
+                    }
+                ]
+            )
+        }
+        else {
+            console.log('signed in');
+            this.state.isFirstTimer ? 
+            AsyncStorage.setItem('isFirstTimer', false)
+            .then(()=> console.log('Set false'))
+            .catch((err)=>console.log(err))
+            : 
+            console.log('Not a first user');
+
+
+            this.setState({isLoading: false}); //quit loading 
+            this.props.navigation.navigate('Home'); //navigate to home screen
+        }
+        
 }
 
     render () {

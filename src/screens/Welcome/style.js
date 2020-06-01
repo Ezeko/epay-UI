@@ -6,6 +6,6 @@ let height = Dimensions.get("window").height;
 export default {
     video: {
         height,
-        width
+        width,
     }
 }
