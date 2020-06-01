@@ -7,7 +7,7 @@ import OTP from "../screens/OTP/index";
 import SignIn from "../screens/SignIn/index"
 import Home from "../screens/Home";
 import HomeX from "../screens/Home2/index";
-import Video from "../screens/Welcome";
+import Welcome from "../screens/Welcome";
 import Lifestyle from "../screens/Lifestyle";
 import Card from "../screens/Card";
 
@@ -49,8 +49,8 @@ const AppNavigator = createStackNavigator(
             headerShown: false
           }
         },
-        Video: {
-          screen: Video,
+        Welcome: {
+          screen: Welcome,
           navigationOptions: {
             headerShown: false
           }
@@ -80,7 +80,7 @@ const AppNavigator = createStackNavigator(
     },
     
     {
-        initialRouteName: "Slider"
+        initialRouteName: "Welcome"
     }
 );
 
