@@ -22,14 +22,15 @@ export default class Index extends Component {
     }
 
     endAction (){
+        let firstTimer = () => (this.props.navigation.replace('Slider'));
         let carryOutTask = () => {
             //if its first timer navigate to slider screen
             this.state.isFirstTimer ? 
-            this.props.navigation.navigate('Slider')
+            firstTimer()
             :
-            this.props.navigation.navigate('SignIn'); //else navigate to signin screen
+            this.props.navigation.replace('SignIn'); //else navigate to signin screen
 
-        }
+        };
 
         setTimeout( carryOutTask, 5000);
 

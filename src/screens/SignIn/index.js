@@ -11,6 +11,7 @@ import {
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import style from './style';
 import Spinner from 'react-native-loading-spinner-overlay';
+import {GlobalVariables} from '../../../Global';
 
 export default class SignIn extends Component {
     constructor (props){
@@ -26,8 +27,8 @@ export default class SignIn extends Component {
     componentDidMount (){
         //get state of app user
         AsyncStorage.getItem('isFirstTimer')
-        .then((isFirstTimer)=> isFirstTimer ? this.setState({isFirstTimer}) 
-        : console.log('Not a firsttimer') )
+        .then((isFirstTimer)=> (isFirstTimer !== null) ? this.setState({isFirstTimer}) 
+        : AsyncStorage.setItem('isFirstTimer', false).then(()=>console.log('')) )
         .catch((error) => console.log(error))
     }
 
@@ -94,17 +95,43 @@ export default class SignIn extends Component {
             )
         }
         else {
-            console.log('signed in');
-            this.state.isFirstTimer ? 
-            AsyncStorage.setItem('isFirstTimer', false)
-            .then(()=> console.log('Set false'))
-            .catch((err)=>console.log(err))
-            : 
-            console.log('Not a first user');
 
 
-            this.setState({isLoading: false}); //quit loading 
-            this.props.navigation.navigate('Home'); //navigate to home screen
+            //connect to backend below
+            //console.log(GlobalVariables.apiURL)
+            fetch(GlobalVariables.apiURL + '/signin', {method: 'POST', body: {"email": email, "password": password}})
+            .then((res)=> {
+                console.log('first ' + JSON.stringify(res))
+                if (res.response == 'ok'){
+                    console.log('signed in');
+                    this.state.isFirstTimer ? 
+                    AsyncStorage.setItem('isFirstTimer', false)
+                    .then(()=> console.log('Set false'))
+                    .catch((err)=>console.log(err))
+                    : 
+                    console.log('Not a first user');
+                            
+                    this.setState({isLoading: false}); //quit loading 
+                    this.props.navigation.replace('Home'); //navigate to home screen
+                }else{
+                    this.setState({isLoading: false}); //quit loading
+                    Alert.alert(
+                        'Oops!',
+                        'App cannot sign in user at the moment',
+                        [
+                            {
+                            text: 'OK',
+                            style: 'cancel'
+                            }
+                        ],
+                        {
+                            cancelable: true
+                        }
+                    )
+                }
+            })
+            .catch((error) => console.log('backend signin error '+ error))
+
         }
         
 }

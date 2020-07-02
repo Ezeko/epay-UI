@@ -12,8 +12,8 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import style from './styles';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Spinner from 'react-native-loading-spinner-overlay';
-import { Item } from 'native-base'
-
+import { Item } from 'native-base';
+import GlobalApi from '../../../Global';
 
 export default class SignUp extends Component {
   constructor (props) {
@@ -203,6 +203,23 @@ export default class SignUp extends Component {
             .catch((err)=>console.log(err))
             : 
             console.log('Not a first user');
+
+      //connect to backend below
+
+      fetch(GlobalApi.apiURL + '/register', {method: 'POST', body: 
+      {
+        firstname,
+        lastName,
+        phone,
+        address,
+        email, 
+        password
+        }
+      })
+      .then((res)=> res.json())
+      .then((reply)=> console.log(reply))
+      .catch((error) => console.log('backend signin error '+ error))
+
 
       this.setState({isLoading: false})
       this.props.navigation.navigate('OTP', {
