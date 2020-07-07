@@ -13,7 +13,7 @@ import style from './styles';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Spinner from 'react-native-loading-spinner-overlay';
 import { Item } from 'native-base';
-import GlobalApi from '../../../Global';
+import  { GlobalVariables } from '../../../Global';
 
 export default class SignUp extends Component {
   constructor (props) {
@@ -206,25 +206,57 @@ export default class SignUp extends Component {
 
       //connect to backend below
 
-      fetch(GlobalApi.apiURL + '/register', {method: 'POST', body: 
+      fetch(GlobalVariables.apiURL + '/register', 
       {
-        firstname,
-        lastName,
-        phone,
-        address,
-        email, 
-        password
+        method: 'POST', 
+        headers: new Headers({
+          'Content-Type': 'application/x-www-form-urlencoded', // <-- Specifying the Content-Type
+        }),
+        body: 
+        
+          "firstname="+ firstname
+          + "lastname=" + lastName
+          + "phone=" + phone
+          + "address=" + address
+          + "email=" + email 
+          + "password=" + password
+          ,
+        
+        })
+        .then((response) => response.text())
+        .then((res)=> {
+          let reply = JSON.stringify(res);
+          console.log('register reply' + reply);
+
+          if (reply.response === 'ok'){
+            this.setState({isLoading: false})
+            this.props.navigation.replace('OTP', {
+              firstname: firstname,
+            })
+          }else{
+            this.setState({isLoading: false}); //quit loading
+            Alert.alert(
+                'Oops!',
+                'App cannot Register user at the moment',
+                [
+                    {
+                    text: 'OK',
+                    style: 'cancel'
+                    }
+                ],
+                {
+                    cancelable: true
+                }
+            )
         }
-      })
-      .then((res)=> res.json())
-      .then((reply)=> console.log(reply))
-      .catch((error) => console.log('backend signin error '+ error))
+        })
+        .catch((error) => {
+          this.setState({isLoading: false})
+          console.log('backend register error '+ error)
+        })
 
 
-      this.setState({isLoading: false})
-      this.props.navigation.navigate('OTP', {
-        firstname: firstname,
-      })
+
     }
     
   }
@@ -233,7 +265,7 @@ export default class SignUp extends Component {
     console.log(this.state)
     return(
       <View style = {style.container} >
-      <StatusBar barStyle = 'dark-content' />
+      <StatusBar barStyle = 'light-content' />
       
       <Spinner visible = {this.state.isLoading}
       textContent = {''}

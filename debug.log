@@ -4,3 +4,4 @@
 [0630/112953.123:ERROR:exception_snapshot_win.cc(98)] thread ID 9568 not found in process
 [0630/112953.123:ERROR:exception_snapshot_win.cc(98)] thread ID 9572 not found in process
 [0630/112953.123:ERROR:exception_snapshot_win.cc(98)] thread ID 9576 not found in process
+[0707/134824.217:ERROR:settings.cc(320)] Settings magic is not 1129342067

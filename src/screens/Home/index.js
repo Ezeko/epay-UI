@@ -40,7 +40,7 @@ export default class Home extends Component {
             onClose={() => this.drawer._root.close()}
             >
             <View style = {style.wrapper}>
-                <StatusBar barStyle = 'dark-content' />
+                <StatusBar barStyle = 'light-content' />
                 <TouchableOpacity
                 onPress={() => this.drawer._root.open()}
                 >

@@ -96,12 +96,23 @@ export default class SignIn extends Component {
         }
         else {
 
-
             //connect to backend below
             //console.log(GlobalVariables.apiURL)
-            fetch(GlobalVariables.apiURL + '/signin', {method: 'POST', body: {"email": email, "password": password}})
+            fetch(GlobalVariables.apiURL + '/signin', 
+            {
+                method: 'POST', 
+                headers: new Headers({
+                    'Content-Type': 'application/x-www-form-urlencoded', // <-- Specifying the Content-Type
+                }),
+                body: 
+                    "email="+ email 
+                    +"password="+ password,
+
+                
+            })
+            .then((response) => response.text())
             .then((res)=> {
-                console.log('first ' + JSON.stringify(res))
+                console.log('first ' + (res))
                 if (res.response == 'ok'){
                     console.log('signed in');
                     this.state.isFirstTimer ? 
@@ -130,7 +141,10 @@ export default class SignIn extends Component {
                     )
                 }
             })
-            .catch((error) => console.log('backend signin error '+ error))
+            .catch((error) => {
+                this.setState({isLoading: false})
+                console.log('backend signin error '+ error)
+              })
 
         }
         
@@ -139,7 +153,7 @@ export default class SignIn extends Component {
     render () {
         return(
             <View style = {style.container}>
-               <StatusBar barStyle = 'dark-content' />
+               <StatusBar barStyle = 'light-content' />
                <Spinner visible = {this.state.isLoading}
                 textContent = {''} 
                 />

@@ -24,7 +24,7 @@ export default class Lifestyle extends Component {
     render() {
         return (
             <View style = {style.wrapper}>
-                <StatusBar barStyle = 'dark-content' />
+                <StatusBar barStyle = 'light-content' />
                 <Spinner
                 visible = {this.state.loading}
                 textContent = 'Loading'
