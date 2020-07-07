@@ -27,8 +27,9 @@ export default class SignIn extends Component {
     componentDidMount (){
         //get state of app user
         AsyncStorage.getItem('isFirstTimer')
-        .then((isFirstTimer)=> (isFirstTimer !== null) ? this.setState({isFirstTimer}) 
-        : AsyncStorage.setItem('isFirstTimer', false).then(()=>console.log('')) )
+        .then((isFirstTimer)=> (isFirstTimer !== '') ? this.setState({isFirstTimer}) 
+        : AsyncStorage.setItem('isFirstTimer', false).then(()=>console.log('is not first timer'))
+        .catch((error) => console.log(error)) )
         .catch((error) => console.log(error))
     }
 
@@ -106,7 +107,7 @@ export default class SignIn extends Component {
                 }),
                 body: 
                     "email="+ email 
-                    +"password="+ password,
+                    +"&password="+ password,
 
                 
             })
@@ -125,10 +126,11 @@ export default class SignIn extends Component {
                     this.setState({isLoading: false}); //quit loading 
                     this.props.navigation.replace('Home'); //navigate to home screen
                 }else{
+                    console.log(JSON.stringify(res.Message))
                     this.setState({isLoading: false}); //quit loading
                     Alert.alert(
                         'Oops!',
-                        'App cannot sign in user at the moment',
+                        'App cannot sign in user at the moment \n',
                         [
                             {
                             text: 'OK',
@@ -151,6 +153,7 @@ export default class SignIn extends Component {
 }
 
     render () {
+        console.log(this.state)
         return(
             <View style = {style.container}>
                <StatusBar barStyle = 'light-content' />

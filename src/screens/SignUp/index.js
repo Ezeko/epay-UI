@@ -213,14 +213,12 @@ export default class SignUp extends Component {
           'Content-Type': 'application/x-www-form-urlencoded', // <-- Specifying the Content-Type
         }),
         body: 
-        
-          "firstname="+ firstname
-          + "lastname=" + lastName
-          + "phone=" + phone
-          + "address=" + address
-          + "email=" + email 
-          + "password=" + password
-          ,
+          "email=" + email
+          +"&firstname="+ firstname
+          + "&lastname=" + lastName
+          + "&phone=" + phone
+          + "&address=" + address 
+          + "&password=" + password
         
         })
         .then((response) => response.text())
