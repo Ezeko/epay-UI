@@ -108,11 +108,11 @@ export default class Saving extends Component {
               <TextInput
                 returnKeyType = 'next'
                 keyboardType = 'number-pad'
-                textContentType = 'oneTimeCode'
+                textContentType = 'none'
                 placeholder = 'Input Amount to Save'
                 maxLength = {8}
                 textAlign = 'center'
-                //onChangeText = {/*(OTP) => this.setState({OTP})*/}
+                onChangeText = {(saving_amount) => this.setState({saving_amount})}
                 onSubmitEditing = { ()=> this.handleSubmission()}
                 style = {style.input}
               />
