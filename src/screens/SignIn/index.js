@@ -127,11 +127,12 @@ export default class SignIn extends Component {
                     this.setState({isLoading: false}); //quit loading 
                     this.props.navigation.replace('Home'); //navigate to home screen
                 }else{
-                    console.log(JSON.stringify(res.Message))
+                    //console.log(JSON.stringify(res.Message))
                     this.setState({isLoading: false}); //quit loading
                     Alert.alert(
                         'Oops!',
-                        'App cannot sign in user at the moment \n',
+                        'App cannot sign in user at the moment \n'+
+                        data.Message,
                         [
                             {
                             text: 'OK',

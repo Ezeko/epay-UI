@@ -235,7 +235,8 @@ export default class SignUp extends Component {
             this.setState({isLoading: false}); //quit loading
             Alert.alert(
                 'Oops!',
-                'App cannot Register user at the moment',
+                'App cannot Register user at the moment \n'+
+                reply.Message,
                 [
                     {
                     text: 'OK',
