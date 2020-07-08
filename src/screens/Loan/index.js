@@ -27,22 +27,75 @@ export default class Loan extends Component {
         })
         .catch((error)=> console.log('loan error: ' + error))
     }
-    handleSubmission () {}
+    handleSubmission () {
+        fetch(GlobalVariables.apiURL + '/saving',
+        {
+          method: 'POST',
+          headers: new Headers({
+            'Content-Type': 'application/x-www-form-urlencoded', // <-- Specifying the Content-Type
+          }),
+          body: 'user_id=' + this.state.user_id
+                + '&amount=' + this.state.loan,
+        }
+      )
+      .then((res)=> res.text())
+      .then((rep) =>{
+        var data = JSON.parse(rep)
+        if (data.response === 'Ok'){
+          this.setState({isLoading: false})
+          Alert.alert(
+            'Success!',
+            data.Message,
+            [
+                {
+                text: 'OK',
+                style: 'cancel'
+                }
+            ],
+            {
+                cancelable: true
+            }
+        )
+
+        }else{
+          Alert.alert(
+            'Oops!',
+            'Error occur \n'+
+            data.Message,
+            [
+                {
+                text: 'OK',
+                style: 'cancel'
+                }
+            ],
+            {
+                cancelable: true
+            }
+        )
+
+        }
+      })
+      .catch((error) => console.log('saving: ' + error))
+
+    }
 
     render(){
         return(
-            <View>
-                
-                {
-                this.state.showButton ?
-                <View>
-                    <Text>Loan AMOUNT: {this.state.loan}</Text>
-                    <TouchableOpacity onPress = {()=> this.handleSubmission()} >
-                        <Text>GET LOAN</Text>
-                    </TouchableOpacity>
+            <View style={style.container}>
+                <View style={style.wrapper}>
+                    {
+                    this.state.showButton ?
+                    <View >
+                        <Text style={style.text}>Loan AMOUNT: {this.state.loan}</Text>
+                        <TouchableOpacity style={style.button} onPress = {()=> this.handleSubmission()} >
+                            <Text style={style.save}>GET LOAN</Text>
+                        </TouchableOpacity>
+                    </View>
+                    : <Text style={style.text}> Not Eligible for loan</Text>
+                    }
                 </View>
-                : <Text> Not Eligible to take loan</Text>
-                }
+                
+                
               
             </View>
         )

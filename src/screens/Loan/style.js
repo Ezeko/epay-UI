@@ -10,8 +10,29 @@ export default {
     fontFamily: 'uber'
  },
  wrapper: {
-    margin: height/8,
-    top: height/7,
+    margin: height/20,
+    top: height/27,
  },
+ text: {
+   fontFamily: 'uber-l',
+   fontSize: 25,
+   color: color.ePayOrange,
+   fontStyle: 'normal'
+   },
+   button: {
+      backgroundColor: color.ePayOrange,
+      elevation: 2,
+      borderRadius: 12,
+      height: 30
+   
+   },
+   save: {
+      color: color.white,
+      fontFamily: 'uber-l',
+      fontSize: 25,
+      textAlign: 'center',
+   
+   }
+   
 
 }
