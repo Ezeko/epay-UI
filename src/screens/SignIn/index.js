@@ -113,8 +113,9 @@ export default class SignIn extends Component {
             })
             .then((response) => response.text())
             .then((res)=> {
-                console.log('first ' + (res))
-                if (res.response == 'ok'){
+                var data = JSON.parse(res)
+                console.log('first ' + data.response)
+                if (data.response == 'Ok'){
                     console.log('signed in');
                     this.state.isFirstTimer ? 
                     AsyncStorage.setItem('isFirstTimer', false)

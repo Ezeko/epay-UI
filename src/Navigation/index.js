@@ -10,6 +10,8 @@ import HomeX from "../screens/Home2/index";
 import Welcome from "../screens/Welcome";
 import Lifestyle from "../screens/Lifestyle";
 import Card from "../screens/Card";
+import Saving from "../screens/Saving";
+import Loan from "../screens/Loan"
 
 const AppNavigator = createStackNavigator(
     {
@@ -48,6 +50,26 @@ const AppNavigator = createStackNavigator(
           navigationOptions: {
             headerShown: false
           }
+        },
+        Saving: {
+          screen: Saving,
+          navigationOptions: {
+            headerShown: true,
+            headerTitleStyle: {
+              fontFamily: 'uber',
+            },
+            headerTitleAlign: 'center'
+          },
+        },
+        Loan: {
+          screen: Loan,
+          navigationOptions: {
+            headerShown: true,
+            headerTitleStyle: {
+              fontFamily: 'uber',
+            },
+            headerTitleAlign: 'center'
+          },
         },
         Welcome: {
           screen: Welcome,

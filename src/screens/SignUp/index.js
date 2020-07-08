@@ -223,10 +223,10 @@ export default class SignUp extends Component {
         })
         .then((response) => response.text())
         .then((res)=> {
-          let reply = JSON.stringify(res);
+          let reply = JSON.parse(res);
           console.log('register reply' + reply);
 
-          if (reply.response === 'ok'){
+          if (reply.response === 'success'){
             this.setState({isLoading: false})
             this.props.navigation.replace('OTP', {
               firstname: firstname,

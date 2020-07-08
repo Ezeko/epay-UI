@@ -89,17 +89,23 @@ export default class Sidebar extends Component {
                             text = 'Welfare'
                             img = {require('../../../assets/logo/SelfService.png')}
                             />
-                            <SideBar 
-                            text = 'Loans'
-                            img = {require('../../../assets/logo/Loans.png')}
-                            />
+                            <TouchableOpacity onPress = {() => this.props.navigation.navigate('Loan')}>
+                                <SideBar 
+                                text = 'Loans'
+                                img = {require('../../../assets/logo/Loans.png')}
+                                />
+                            </TouchableOpacity>
+                            
                         </View>
                         
                         <View style = {style.widget} >
-                            <SideBar 
-                            text = 'Savings'
-                            img = {require('../../../assets/logo/Savings.png')}
-                            />
+                            <TouchableOpacity onPress = {() => this.props.navigation.navigate('Saving')}>
+                                <SideBar 
+                                text = 'Savings'
+                                img = {require('../../../assets/logo/Savings.png')}
+                                />
+                            </TouchableOpacity>
+                            
 
 
                             <SideBar 
